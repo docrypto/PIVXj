@@ -453,7 +453,7 @@ public class MatiTest {
             public InetSocketAddress[] getPeers(long services, long timeoutValue, TimeUnit timeoutUnit) throws PeerDiscoveryException {
                 return new InetSocketAddress[]{
                         //new InetSocketAddress("202.5.21.31",51474),
-                        new InetSocketAddress("localhost",51474)
+                        new InetSocketAddress("localhost",51475)
                         //new InetSocketAddress("localhost",51474)
                         //new InetSocketAddress("88.198.192.110",51474)
                 };

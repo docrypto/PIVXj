@@ -157,7 +157,7 @@ public abstract class NetworkParameters {
         genesisBlock.addTransaction(tx);
         //System.out.println("genesis tx hash: "+tx.getHashAsString());
         // genesis tx should be -> 1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b
-        if (!tx.getHashAsString().equals("1b2ef6e2f28be914103a277377ae7729dcd125dfeb8bf97bd5964ba72b6dc39b")) throw new IllegalStateException("invalid genesis tx: "+tx.getHashAsString());
+        if (!tx.getHashAsString().equals(CoinDefinition.genesisMerkleRoot)) throw new IllegalStateException("invalid genesis tx: "+tx.getHashAsString());
         return genesisBlock;
     }
 
