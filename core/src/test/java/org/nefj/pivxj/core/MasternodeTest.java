@@ -1,6 +1,6 @@
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.params.MainNetParams;
+import org.nefj.params.MainNetParams;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 /**

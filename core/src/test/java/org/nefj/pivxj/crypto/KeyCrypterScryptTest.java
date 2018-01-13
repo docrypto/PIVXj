@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
-import org.pivxj.core.Utils;
-import org.pivxj.utils.BriefLogFormatter;
+import org.nefj.core.Utils;
+import org.nefj.utils.BriefLogFormatter;
 import com.google.protobuf.ByteString;
 
-import org.pivxj.wallet.Protos;
-import org.pivxj.wallet.Protos.ScryptParameters;
+import org.nefj.wallet.Protos;
+import org.nefj.wallet.Protos.ScryptParameters;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;

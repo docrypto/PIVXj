@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.*;
-import org.pivxj.crypto.*;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.listeners.KeyChainEventListener;
+import org.nefj.core.*;
+import org.nefj.crypto.*;
+import org.nefj.params.MainNetParams;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.listeners.KeyChainEventListener;
 
 import com.google.common.collect.ImmutableList;
 import org.junit.Before;

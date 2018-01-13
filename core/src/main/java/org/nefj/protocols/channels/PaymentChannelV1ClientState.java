@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.MultimapBuilder;
-import org.pivxj.core.*;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.wallet.AllowUnconfirmedCoinSelector;
-import org.pivxj.wallet.SendRequest;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.*;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.wallet.AllowUnconfirmedCoinSelector;
+import org.nefj.wallet.SendRequest;
+import org.nefj.wallet.Wallet;
 import org.spongycastle.crypto.params.KeyParameter;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.Lists;
@@ -116,7 +116,7 @@ public class PaymentChannelV1ClientState extends PaymentChannelClientState {
      * Creates the initial multisig contract and incomplete refund transaction which can be requested at the appropriate
      * time using {@link PaymentChannelV1ClientState#getIncompleteRefundTransaction} and
      * {@link PaymentChannelV1ClientState#getContract()}. The way the contract is crafted can be adjusted by
-     * overriding {@link PaymentChannelV1ClientState#editContractSendRequest(org.pivxj.core.Wallet.SendRequest)}.
+     * overriding {@link PaymentChannelV1ClientState#editContractSendRequest(org.nefj.core.Wallet.SendRequest)}.
      * By default unconfirmed coins are allowed to be used, as for micropayments the risk should be relatively low.
      * @param userKey Key derived from a user password, needed for any signing when the wallet is encrypted.
      *                  The wallet KeyCrypter is assumed.

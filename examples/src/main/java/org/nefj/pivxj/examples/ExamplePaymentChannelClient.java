@@ -15,22 +15,22 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
-import org.pivxj.core.*;
-import org.pivxj.kits.WalletAppKit;
-import org.pivxj.params.RegTestParams;
-import org.pivxj.protocols.channels.PaymentChannelClient;
-import org.pivxj.protocols.channels.PaymentChannelClientConnection;
-import org.pivxj.protocols.channels.StoredPaymentChannelClientStates;
-import org.pivxj.protocols.channels.ValueOutOfRangeException;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletExtension;
+import org.nefj.core.*;
+import org.nefj.kits.WalletAppKit;
+import org.nefj.params.RegTestParams;
+import org.nefj.protocols.channels.PaymentChannelClient;
+import org.nefj.protocols.channels.PaymentChannelClientConnection;
+import org.nefj.protocols.channels.StoredPaymentChannelClientStates;
+import org.nefj.protocols.channels.ValueOutOfRangeException;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletExtension;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.util.concurrent.FutureCallback;
@@ -46,7 +46,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 
-import static org.pivxj.core.Coin.CENT;
+import static org.nefj.core.Coin.CENT;
 
 /**
  * Simple client that connects to the given host, opens a channel, and pays one cent.

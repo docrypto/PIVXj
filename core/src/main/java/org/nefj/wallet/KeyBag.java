@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.ECKey;
+import org.nefj.core.ECKey;
 
 import javax.annotation.Nullable;
 

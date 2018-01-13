@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import org.pivxj.core.Utils;
+import org.nefj.core.Utils;
 import com.google.common.primitives.Longs;
 
 import static com.google.common.base.Preconditions.checkArgument;

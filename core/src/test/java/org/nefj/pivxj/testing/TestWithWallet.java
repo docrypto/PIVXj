@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.testing;
+package org.nefj.testing;
 
-import org.pivxj.core.*;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.*;
+import org.nefj.params.UnitTestParams;
+import org.nefj.store.BlockStore;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.Wallet;
 
 import javax.annotation.Nullable;
 
-import static org.pivxj.testing.FakeTxBuilder.createFakeBlock;
-import static org.pivxj.testing.FakeTxBuilder.createFakeTx;
+import static org.nefj.testing.FakeTxBuilder.createFakeBlock;
+import static org.nefj.testing.FakeTxBuilder.createFakeTx;
 
 // TODO: This needs to be somewhat rewritten - the "sendMoneyToWallet" methods aren't sending via the block chain object
 

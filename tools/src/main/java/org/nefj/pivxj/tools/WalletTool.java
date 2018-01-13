@@ -15,25 +15,25 @@
  * limitations under the License.
  */
 
-package org.pivxj.tools;
+package org.nefj.tools;
 
-import org.pivxj.core.*;
-import org.pivxj.crypto.*;
-import org.pivxj.net.discovery.DnsDiscovery;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.RegTestParams;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.protocols.payments.PaymentProtocol;
-import org.pivxj.protocols.payments.PaymentProtocolException;
-import org.pivxj.protocols.payments.PaymentSession;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.store.*;
-import org.pivxj.uri.PivxURI;
-import org.pivxj.uri.BitcoinURIParseException;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.DeterministicSeed;
-import org.pivxj.wallet.DeterministicUpgradeRequiredException;
-import org.pivxj.wallet.DeterministicUpgradeRequiresPassword;
+import org.nefj.core.*;
+import org.nefj.crypto.*;
+import org.nefj.net.discovery.DnsDiscovery;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.RegTestParams;
+import org.nefj.params.TestNet3Params;
+import org.nefj.protocols.payments.PaymentProtocol;
+import org.nefj.protocols.payments.PaymentProtocolException;
+import org.nefj.protocols.payments.PaymentSession;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.store.*;
+import org.nefj.uri.NefURI;
+import org.nefj.uri.BitcoinURIParseException;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.DeterministicSeed;
+import org.nefj.wallet.DeterministicUpgradeRequiredException;
+import org.nefj.wallet.DeterministicUpgradeRequiresPassword;
 import com.google.common.base.Charsets;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
@@ -47,19 +47,19 @@ import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
 import joptsimple.util.DateConverter;
 
-import org.pivxj.core.listeners.BlocksDownloadedEventListener;
-import org.pivxj.core.listeners.DownloadProgressTracker;
-import org.pivxj.wallet.MarriedKeyChain;
-import org.pivxj.wallet.Protos;
-import org.pivxj.wallet.SendRequest;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletExtension;
-import org.pivxj.wallet.WalletProtobufSerializer;
-import org.pivxj.wallet.Wallet.BalanceType;
-import org.pivxj.wallet.listeners.WalletChangeEventListener;
-import org.pivxj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.pivxj.wallet.listeners.WalletCoinsSentEventListener;
-import org.pivxj.wallet.listeners.WalletReorganizeEventListener;
+import org.nefj.core.listeners.BlocksDownloadedEventListener;
+import org.nefj.core.listeners.DownloadProgressTracker;
+import org.nefj.wallet.MarriedKeyChain;
+import org.nefj.wallet.Protos;
+import org.nefj.wallet.SendRequest;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletExtension;
+import org.nefj.wallet.WalletProtobufSerializer;
+import org.nefj.wallet.Wallet.BalanceType;
+import org.nefj.wallet.listeners.WalletChangeEventListener;
+import org.nefj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.nefj.wallet.listeners.WalletCoinsSentEventListener;
+import org.nefj.wallet.listeners.WalletReorganizeEventListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.params.KeyParameter;
@@ -83,7 +83,7 @@ import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 
-import static org.pivxj.core.Coin.parseCoin;
+import static org.nefj.core.Coin.parseCoin;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
@@ -1000,7 +1000,7 @@ public class WalletTool {
                 if (location.startsWith("http")) {
                     future = PaymentSession.createFromUrl(location, verifyPki);
                 } else {
-                    PivxURI paymentRequestURI = new PivxURI(location);
+                    NefURI paymentRequestURI = new NefURI(location);
                     future = PaymentSession.createFromBitcoinUri(paymentRequestURI, verifyPki);
                 }
                 PaymentSession session = future.get();

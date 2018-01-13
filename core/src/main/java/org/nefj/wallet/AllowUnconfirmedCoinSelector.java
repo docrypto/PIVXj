@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.Transaction;
+import org.nefj.core.Transaction;
 
 /**
  * This coin selector will select any transaction at all, regardless of where it came from or whether it was

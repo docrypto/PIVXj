@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.testing;
+package org.nefj.testing;
 
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletExtension;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletExtension;
 
 import java.util.Arrays;
 

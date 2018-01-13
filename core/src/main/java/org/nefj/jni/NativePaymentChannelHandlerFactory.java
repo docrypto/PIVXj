@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.jni;
+package org.nefj.jni;
 
-import org.pivxj.protocols.channels.PaymentChannelServerListener;
-import org.pivxj.protocols.channels.ServerConnectionEventHandler;
+import org.nefj.protocols.channels.PaymentChannelServerListener;
+import org.nefj.protocols.channels.ServerConnectionEventHandler;
 
 import javax.annotation.Nullable;
 import java.net.SocketAddress;

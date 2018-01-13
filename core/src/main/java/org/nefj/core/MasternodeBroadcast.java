@@ -1,7 +1,7 @@
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
 import org.darkcoinj.DarkSendSigner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

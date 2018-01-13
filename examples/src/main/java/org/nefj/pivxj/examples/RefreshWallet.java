@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.*;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.nefj.core.*;
+import org.nefj.params.TestNet3Params;
+import org.nefj.store.BlockStore;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.listeners.WalletCoinsReceivedEventListener;
 
 import java.io.File;
 

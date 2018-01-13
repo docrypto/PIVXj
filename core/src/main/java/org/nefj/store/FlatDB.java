@@ -1,4 +1,4 @@
-package org.pivxj.store;
+package org.nefj.store;
 
 /**
  * Created by Hash Engineering on 6/21/2016.
@@ -10,7 +10,7 @@ package org.pivxj.store;
  */
 
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

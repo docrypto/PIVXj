@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core.listeners;
+package org.nefj.core.listeners;
 
 /**
  * Old interface for backwards compatibility. Implement the more specific interfaces instead.

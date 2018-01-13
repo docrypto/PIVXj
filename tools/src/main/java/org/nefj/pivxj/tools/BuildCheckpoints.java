@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.tools;
+package org.nefj.tools;
 
-import org.pivxj.core.listeners.NewBestBlockListener;
-import org.pivxj.core.*;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.RegTestParams;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.utils.Threading;
+import org.nefj.core.listeners.NewBestBlockListener;
+import org.nefj.core.*;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.RegTestParams;
+import org.nefj.params.TestNet3Params;
+import org.nefj.store.BlockStore;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.utils.Threading;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import joptsimple.OptionParser;
@@ -116,10 +116,10 @@ public class BuildCheckpoints {
         // Sorted map of block height to StoredBlock object.
         final TreeMap<Integer, StoredBlock> checkpoints = new TreeMap<Integer, StoredBlock>();
 
-        // Configure pivxj to fetch only headers, not save them to disk, connect to a local fully synced/validated
+        // Configure nefj to fetch only headers, not save them to disk, connect to a local fully synced/validated
         // node and to save block headers that are on interval boundaries, as long as they are <1 month old.
 
-        //Context.getOrCreate(params).initPivx(true, false);
+        //Context.getOrCreate(params).initNef(true, false);
         final BlockStore store = new MemoryBlockStore(params);
         final BlockChain chain = new BlockChain(params, store);
         final PeerGroup peerGroup = new PeerGroup(params, chain);

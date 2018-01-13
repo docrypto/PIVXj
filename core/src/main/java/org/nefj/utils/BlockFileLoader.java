@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import org.pivxj.core.Block;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.ProtocolException;
-import org.pivxj.core.Utils;
+import org.nefj.core.Block;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.ProtocolException;
+import org.nefj.core.Utils;
 
 import java.io.File;
 import java.io.FileInputStream;

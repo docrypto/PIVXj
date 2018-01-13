@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 /**
  * <p>Represents the "getdata" P2P network message, which requests the contents of blocks or transactions given their

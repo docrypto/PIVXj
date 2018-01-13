@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
 import com.google.common.collect.*;
-import org.pivxj.core.*;
+import org.nefj.core.*;
 import org.spongycastle.math.ec.*;
 
 import java.math.*;

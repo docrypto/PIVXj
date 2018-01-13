@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.pivxj.testing;
+package org.nefj.testing;
 
-import org.pivxj.core.listeners.PeerDisconnectedEventListener;
-import org.pivxj.core.listeners.PreMessageReceivedEventListener;
-import org.pivxj.core.*;
-import org.pivxj.net.*;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.listeners.PeerDisconnectedEventListener;
+import org.nefj.core.listeners.PreMessageReceivedEventListener;
+import org.nefj.core.*;
+import org.nefj.net.*;
+import org.nefj.params.UnitTestParams;
+import org.nefj.store.BlockStore;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
 
 import com.google.common.util.concurrent.SettableFuture;
 

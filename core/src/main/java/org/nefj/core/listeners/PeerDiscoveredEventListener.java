@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.core.listeners;
+package org.nefj.core.listeners;
 
-import org.pivxj.core.Peer;
-import org.pivxj.core.PeerAddress;
+import org.nefj.core.Peer;
+import org.nefj.core.PeerAddress;
 import java.util.Set;
 
 /**

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.core.listeners;
+package org.nefj.core.listeners;
 
-import org.pivxj.core.Block;
-import org.pivxj.core.FilteredBlock;
-import org.pivxj.core.GetDataMessage;
-import org.pivxj.core.Message;
-import org.pivxj.core.PeerAddress;
-import org.pivxj.core.Peer;
-import org.pivxj.core.Transaction;
+import org.nefj.core.Block;
+import org.nefj.core.FilteredBlock;
+import org.nefj.core.GetDataMessage;
+import org.nefj.core.Message;
+import org.nefj.core.PeerAddress;
+import org.nefj.core.Peer;
+import org.nefj.core.Transaction;
 import javax.annotation.*;
 import java.util.List;
 import java.util.Set;

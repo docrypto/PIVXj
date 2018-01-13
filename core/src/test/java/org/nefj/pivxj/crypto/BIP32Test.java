@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
-import org.pivxj.core.Base58;
+import org.nefj.core.Base58;
 import com.google.common.base.Functions;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.params.MainNetParams;
+import org.nefj.core.NetworkParameters;
+import org.nefj.params.MainNetParams;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +31,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-import static org.pivxj.core.Utils.HEX;
+import static org.nefj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 
 /**

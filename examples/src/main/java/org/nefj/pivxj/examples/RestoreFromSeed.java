@@ -12,15 +12,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.listeners.DownloadProgressTracker;
-import org.pivxj.core.*;
-import org.pivxj.net.discovery.DnsDiscovery;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.store.SPVBlockStore;
-import org.pivxj.wallet.DeterministicSeed;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.listeners.DownloadProgressTracker;
+import org.nefj.core.*;
+import org.nefj.net.discovery.DnsDiscovery;
+import org.nefj.params.TestNet3Params;
+import org.nefj.store.SPVBlockStore;
+import org.nefj.wallet.DeterministicSeed;
+import org.nefj.wallet.Wallet;
 
 import java.io.File;
 

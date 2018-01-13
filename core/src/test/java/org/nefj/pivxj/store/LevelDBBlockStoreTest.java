@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.store;
+package org.nefj.store;
 
-import org.pivxj.core.*;
-import org.pivxj.params.*;
+import org.nefj.core.*;
+import org.nefj.params.*;
 import org.junit.*;
 
 import java.io.*;

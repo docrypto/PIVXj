@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet.listeners;
+package org.nefj.wallet.listeners;
 
-import org.pivxj.script.Script;
-import org.pivxj.wallet.Wallet;
+import org.nefj.script.Script;
+import org.nefj.wallet.Wallet;
 
 import java.util.List;
 

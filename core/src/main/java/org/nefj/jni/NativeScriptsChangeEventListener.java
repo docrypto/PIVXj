@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.jni;
+package org.nefj.jni;
 
-import org.pivxj.script.Script;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.listeners.ScriptsChangeEventListener;
+import org.nefj.script.Script;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.listeners.ScriptsChangeEventListener;
 
 import java.util.List;
 

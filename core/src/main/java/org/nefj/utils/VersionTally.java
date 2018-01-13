@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
 import java.util.Stack;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.StoredBlock;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.StoredBlock;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
 
 /**
  * Caching counter for the block versions within a moving window. This class
  * is NOT thread safe (as if two threads are trying to use it concurrently,
  * there's risk of getting versions out of sequence).
  *
- * @see org.pivxj.core.NetworkParameters#getMajorityWindow()
- * @see org.pivxj.core.NetworkParameters#getMajorityEnforceBlockUpgrade()
- * @see org.pivxj.core.NetworkParameters#getMajorityRejectBlockOutdated()
+ * @see org.nefj.core.NetworkParameters#getMajorityWindow()
+ * @see org.nefj.core.NetworkParameters#getMajorityEnforceBlockUpgrade()
+ * @see org.nefj.core.NetworkParameters#getMajorityRejectBlockOutdated()
  */
 public class VersionTally {
     /**

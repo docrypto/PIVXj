@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.store;
+package org.nefj.store;
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 import org.fusesource.leveldbjni.*;
 import org.iq80.leveldb.*;
 

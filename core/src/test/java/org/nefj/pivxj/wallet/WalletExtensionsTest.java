@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.testing.FooWalletExtension;
-import org.pivxj.testing.TestWithWallet;
+import org.nefj.testing.FooWalletExtension;
+import org.nefj.testing.TestWithWallet;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

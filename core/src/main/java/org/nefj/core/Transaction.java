@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.core.TransactionConfidence.ConfidenceType;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.script.ScriptOpCodes;
-import org.pivxj.signers.TransactionSigner;
-import org.pivxj.utils.ExchangeRate;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletTransaction.Pool;
+import org.nefj.core.TransactionConfidence.ConfidenceType;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.script.ScriptOpCodes;
+import org.nefj.signers.TransactionSigner;
+import org.nefj.utils.ExchangeRate;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletTransaction.Pool;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.primitives.Ints;
@@ -38,7 +38,7 @@ import javax.annotation.Nullable;
 import java.io.*;
 import java.util.*;
 
-import static org.pivxj.core.Utils.*;
+import static org.nefj.core.Utils.*;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkState;
 import java.math.BigInteger;
@@ -806,7 +806,7 @@ public class Transaction extends ChildMessage {
     }
 
     /**
-     * Same as {@link #addSignedInput(TransactionOutPoint, org.pivxj.script.Script, ECKey, org.pivxj.core.Transaction.SigHash, boolean)}
+     * Same as {@link #addSignedInput(TransactionOutPoint, org.nefj.script.Script, ECKey, org.nefj.core.Transaction.SigHash, boolean)}
      * but defaults to {@link SigHash#ALL} and "false" for the anyoneCanPay flag. This is normally what you want.
      */
     public TransactionInput addSignedInput(TransactionOutPoint prevOut, Script scriptPubKey, ECKey sigKey) throws ScriptException {
@@ -880,7 +880,7 @@ public class Transaction extends ChildMessage {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], org.pivxj.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], org.nefj.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash)} and then returning a new {@link TransactionSignature}. The key
      * must be usable for signing as-is: if the key is encrypted it must be decrypted first external to this method.
      *
@@ -900,7 +900,7 @@ public class Transaction extends ChildMessage {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], org.pivxj.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], org.nefj.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash)} and then returning a new {@link TransactionSignature}.
      *
      * @param inputIndex Which input to calculate the signature for, as an index.
@@ -1144,7 +1144,7 @@ public class Transaction extends ChildMessage {
     }
 
     /**
-     * Returns the confidence object for this transaction from the {@link org.pivxj.core.TxConfidenceTable}
+     * Returns the confidence object for this transaction from the {@link org.nefj.core.TxConfidenceTable}
      * referenced by the implicit {@link Context}.
      */
     public TransactionConfidence getConfidence() {
@@ -1152,7 +1152,7 @@ public class Transaction extends ChildMessage {
     }
 
     /**
-     * Returns the confidence object for this transaction from the {@link org.pivxj.core.TxConfidenceTable}
+     * Returns the confidence object for this transaction from the {@link org.nefj.core.TxConfidenceTable}
      * referenced by the given {@link Context}.
      */
     public TransactionConfidence getConfidence(Context context) {
@@ -1160,7 +1160,7 @@ public class Transaction extends ChildMessage {
     }
 
     /**
-     * Returns the confidence object for this transaction from the {@link org.pivxj.core.TxConfidenceTable}
+     * Returns the confidence object for this transaction from the {@link org.nefj.core.TxConfidenceTable}
      */
     public TransactionConfidence getConfidence(TxConfidenceTable table) {
         if (confidence == null)

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
-import org.pivxj.core.ECKey;
-import org.pivxj.crypto.BIP38PrivateKey.BadPassphraseException;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet3Params;
+import org.nefj.core.ECKey;
+import org.nefj.crypto.BIP38PrivateKey.BadPassphraseException;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet3Params;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;

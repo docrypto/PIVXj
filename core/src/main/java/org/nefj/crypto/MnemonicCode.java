@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
-import org.pivxj.core.Sha256Hash;
-import org.pivxj.core.Utils;
+import org.nefj.core.Sha256Hash;
+import org.nefj.core.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,7 +35,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.pivxj.core.Utils.HEX;
+import static org.nefj.core.Utils.HEX;
 
 /**
  * A MnemonicCode object may be used to convert between binary seed values and

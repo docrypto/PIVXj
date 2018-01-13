@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.base.Objects;
-import org.pivxj.net.discovery.HttpDiscovery;
-import org.pivxj.params.*;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.script.ScriptChunk;
-import org.pivxj.script.ScriptOpCodes;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.utils.MonetaryFormat;
+import org.nefj.net.discovery.HttpDiscovery;
+import org.nefj.params.*;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.script.ScriptChunk;
+import org.nefj.script.ScriptOpCodes;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
+import org.nefj.utils.MonetaryFormat;
 
 import javax.annotation.Nullable;
 import java.math.BigInteger;
@@ -34,8 +34,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.EnumSet;
 
-import static org.pivxj.core.Coin.*;
-import org.pivxj.utils.VersionTally;
+import static org.nefj.core.Coin.*;
+import org.nefj.utils.VersionTally;
 
 /**
  * <p>NetworkParameters contains the data needed for working with an instantiation of a Bitcoin chain.</p>
@@ -60,7 +60,7 @@ public abstract class NetworkParameters {
     /** Unit test network. */
     public static final String ID_UNITTESTNET = CoinDefinition.ID_UNITTESTNET; //"com.google.bitcoin.unittest";
     /** The string returned by getId() for regtest mode. */
-    public static final String ID_REGTEST = "org.pivx.regtest";
+    public static final String ID_REGTEST = "org.nef.regtest";
 
     /** The string used by the payment protocol to represent the main net. */
     public static final String PAYMENT_PROTOCOL_ID_MAINNET = "main";
@@ -316,7 +316,7 @@ public abstract class NetworkParameters {
         return addrSeeds;
     }
 
-    /** Returns discovery objects for seeds implementing the Cartographer protocol. See {@link org.pivxj.net.discovery.HttpDiscovery} for more info. */
+    /** Returns discovery objects for seeds implementing the Cartographer protocol. See {@link org.nefj.net.discovery.HttpDiscovery} for more info. */
     public HttpDiscovery.Details[] getHttpSeeds() {
         return httpSeeds;
     }
@@ -347,7 +347,7 @@ public abstract class NetworkParameters {
     }
 
     /**
-     * First byte of a base58 encoded address. See {@link org.pivxj.core.Address}. This is the same as acceptableAddressCodes[0] and
+     * First byte of a base58 encoded address. See {@link org.nefj.core.Address}. This is the same as acceptableAddressCodes[0] and
      * is the one used for "normal" addresses. Other types of address may be encountered with version codes found in
      * the acceptableAddressCodes array.
      */
@@ -362,7 +362,7 @@ public abstract class NetworkParameters {
         return p2shHeader;
     }
 
-    /** First byte of a base58 encoded dumped private key. See {@link org.pivxj.core.DumpedPrivateKey}. */
+    /** First byte of a base58 encoded dumped private key. See {@link org.nefj.core.DumpedPrivateKey}. */
     public int getDumpedPrivateKeyHeader() {
         return dumpedPrivateKeyHeader;
     }
@@ -403,7 +403,7 @@ public abstract class NetworkParameters {
     }
 
     /**
-     * The key used to sign {@link org.pivxj.core.AlertMessage}s. You can use {@link org.pivxj.core.ECKey#verify(byte[], byte[], byte[])} to verify
+     * The key used to sign {@link org.nefj.core.AlertMessage}s. You can use {@link org.nefj.core.ECKey#verify(byte[], byte[], byte[])} to verify
      * signatures using it.
      */
     public byte[] getAlertSigningKey() {

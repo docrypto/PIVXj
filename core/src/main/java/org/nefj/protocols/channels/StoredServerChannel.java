@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.core.*;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.*;
+import org.nefj.wallet.Wallet;
 
 import javax.annotation.Nullable;
 import java.util.Date;
@@ -88,7 +88,7 @@ public class StoredServerChannel {
     }
 
     /**
-     * If a handler is connected, call its {@link org.pivxj.protocols.channels.PaymentChannelServer#close()}
+     * If a handler is connected, call its {@link org.nefj.protocols.channels.PaymentChannelServer#close()}
      * method thus disconnecting the TCP connection.
      */
     synchronized void closeConnectedHandler() {

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.core.listeners;
+package org.nefj.core.listeners;
 
-import org.pivxj.core.Transaction;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.Transaction;
+import org.nefj.wallet.Wallet;
 
 /**
  * <p>Implementors are called when confidence of a transaction changes.</p>

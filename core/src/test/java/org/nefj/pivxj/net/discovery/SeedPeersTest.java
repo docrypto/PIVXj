@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.net.discovery;
+package org.nefj.net.discovery;
 
-import org.pivxj.params.MainNetParams;
+import org.nefj.params.MainNetParams;
 import org.junit.Test;
 
 import java.net.InetSocketAddress;

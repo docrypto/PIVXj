@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.payments;
+package org.nefj.protocols.payments;
 
-import org.pivxj.core.*;
-import org.pivxj.crypto.X509Utils;
-import org.pivxj.script.ScriptBuilder;
+import org.nefj.core.*;
+import org.nefj.crypto.X509Utils;
+import org.nefj.script.ScriptBuilder;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;

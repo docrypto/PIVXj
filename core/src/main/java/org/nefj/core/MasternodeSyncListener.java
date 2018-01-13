@@ -1,4 +1,4 @@
-package org.pivxj.core;
+package org.nefj.core;
 
 /**
  * Created by Hash Engineering on 2/28/2016.

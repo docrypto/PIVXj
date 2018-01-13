@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.Transaction;
+import org.nefj.core.Transaction;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
- * Stores data about a transaction that is only relevant to the {@link org.pivxj.wallet.Wallet} class.
+ * Stores data about a transaction that is only relevant to the {@link org.nefj.wallet.Wallet} class.
  */
 public class WalletTransaction {
     public enum Pool {

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet.listeners;
+package org.nefj.wallet.listeners;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.Transaction;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.Coin;
+import org.nefj.core.Transaction;
+import org.nefj.wallet.Wallet;
 
 /**
  * <p>Implementors are called when the contents of the wallet changes, for instance due to receiving/sending money

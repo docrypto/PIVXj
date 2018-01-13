@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.jni;
+package org.nefj.jni;
 
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.pivxj.core.Coin;
-import org.pivxj.core.Transaction;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.nefj.core.Coin;
+import org.nefj.core.Transaction;
 
 /**
  * An event listener that relays events to a native C++ object. A pointer to that object is stored in

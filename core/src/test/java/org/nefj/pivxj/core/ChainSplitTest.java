@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.core.listeners.TransactionConfidenceEventListener;
-import org.pivxj.core.TransactionConfidence.ConfidenceType;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.testing.FakeTxBuilder;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletTransaction;
-import org.pivxj.wallet.listeners.WalletChangeEventListener;
-import org.pivxj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.pivxj.wallet.listeners.WalletReorganizeEventListener;
+import org.nefj.core.listeners.TransactionConfidenceEventListener;
+import org.nefj.core.TransactionConfidence.ConfidenceType;
+import org.nefj.params.UnitTestParams;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.testing.FakeTxBuilder;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletTransaction;
+import org.nefj.wallet.listeners.WalletChangeEventListener;
+import org.nefj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.nefj.wallet.listeners.WalletReorganizeEventListener;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -42,7 +42,7 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.pivxj.core.Coin.*;
+import static org.nefj.core.Coin.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.junit.Assert.*;
 

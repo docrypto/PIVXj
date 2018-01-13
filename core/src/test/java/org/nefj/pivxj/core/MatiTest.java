@@ -1,24 +1,24 @@
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.base.Charsets;
-import org.pivxj.core.listeners.*;
-import org.pivxj.crypto.DeterministicKey;
-import org.pivxj.crypto.LazyECPoint;
-import org.pivxj.crypto.MnemonicCode;
-import org.pivxj.crypto.MnemonicException;
-import org.pivxj.net.discovery.PeerDiscovery;
-import org.pivxj.net.discovery.PeerDiscoveryException;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.script.ScriptChunk;
-import org.pivxj.script.ScriptOpCodes;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.store.LevelDBBlockStore;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.*;
+import org.nefj.core.listeners.*;
+import org.nefj.crypto.DeterministicKey;
+import org.nefj.crypto.LazyECPoint;
+import org.nefj.crypto.MnemonicCode;
+import org.nefj.crypto.MnemonicException;
+import org.nefj.net.discovery.PeerDiscovery;
+import org.nefj.net.discovery.PeerDiscoveryException;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet3Params;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.script.ScriptChunk;
+import org.nefj.script.ScriptOpCodes;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
+import org.nefj.store.LevelDBBlockStore;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.*;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.event.Level;
@@ -98,7 +98,7 @@ public class MatiTest {
         Wallet wallet = Wallet.fromSeed(
                 networkParameters,
                 seed,
-                DeterministicKeyChain.KeyChainType.BIP44_PIVX_ONLY
+                DeterministicKeyChain.KeyChainType.BIP44_NEF_ONLY
         );
 
         System.out.println("Wallet version: "+wallet.getVersion());
@@ -164,8 +164,8 @@ public class MatiTest {
     }
 
     public Wallet restore(NetworkParameters networkParameters) throws IOException {
-        String filename = "2.0.32_pivx-wallet-backup_org.pivx.production-2017-11-20";
-        //"1.01_pivx-wallet-backup_org.pivx.production-2017-07-26 (2)";
+        String filename = "2.0.32_nef-wallet-backup_org.nef.production-2017-11-20";
+        //"1.01_nef-wallet-backup_org.nef.production-2017-07-26 (2)";
         String password = "123";//"12345678";
 
 
@@ -251,7 +251,7 @@ public class MatiTest {
         Wallet wallet = Wallet.fromSeed(
                 networkParameters,
                 seed,
-                DeterministicKeyChain.KeyChainType.BIP44_PIVX_ONLY
+                DeterministicKeyChain.KeyChainType.BIP44_NEF_ONLY
         );
 
         DeterministicKey xpubKey = wallet.getWatchingKey();
@@ -261,7 +261,7 @@ public class MatiTest {
         System.out.println("chaincode: "+ Hex.toHexString(xpubKey.getChainCode()));
         System.out.println("first address: "+wallet.freshReceiveAddress().toBase58());
 
-        Wallet watchingWallet = Wallet.fromWatchingKeyB58(networkParameters,xpub,0, DeterministicKeyChain.KeyChainType.BIP44_PIVX_ONLY);
+        Wallet watchingWallet = Wallet.fromWatchingKeyB58(networkParameters,xpub,0, DeterministicKeyChain.KeyChainType.BIP44_NEF_ONLY);
         DeterministicKey xpubKey2 = watchingWallet.getWatchingKey();
         System.out.println("Watching key:  "+xpubKey2.serializePubB58(networkParameters));
         System.out.println("key path: "+xpubKey2.getPathAsString());

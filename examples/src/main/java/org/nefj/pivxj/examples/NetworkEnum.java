@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.RegTestParams;
-import org.pivxj.params.TestNet3Params;
+import org.nefj.core.NetworkParameters;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.RegTestParams;
+import org.nefj.params.TestNet3Params;
 
 public enum NetworkEnum {
     MAIN,

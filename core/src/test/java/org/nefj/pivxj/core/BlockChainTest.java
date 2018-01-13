@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet2Params;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.testing.FakeTxBuilder;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.Wallet.BalanceType;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet2Params;
+import org.nefj.params.UnitTestParams;
+import org.nefj.store.BlockStore;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.testing.FakeTxBuilder;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.Wallet.BalanceType;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import org.junit.rules.ExpectedException;
@@ -38,9 +38,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.testing.FakeTxBuilder.createFakeBlock;
-import static org.pivxj.testing.FakeTxBuilder.createFakeTx;
+import static org.nefj.core.Coin.*;
+import static org.nefj.testing.FakeTxBuilder.createFakeBlock;
+import static org.nefj.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 
 // Handling of chain splits/reorgs are in ChainSplitTests.

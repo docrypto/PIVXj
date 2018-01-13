@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.net;
+package org.nefj.net;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

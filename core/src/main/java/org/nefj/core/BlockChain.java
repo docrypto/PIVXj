@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.wallet.Wallet;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
+import org.nefj.wallet.Wallet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +42,8 @@ public class BlockChain extends AbstractBlockChain {
      * one from scratch, or you can deserialize a saved wallet from disk using
      * {@link Wallet#loadFromFile(java.io.File, WalletExtension...)}</p>
      *
-     * <p>For the store, you should use {@link org.pivxj.store.SPVBlockStore} or you could also try a
-     * {@link org.pivxj.store.MemoryBlockStore} if you want to hold all headers in RAM and don't care about
+     * <p>For the store, you should use {@link org.nefj.store.SPVBlockStore} or you could also try a
+     * {@link org.nefj.store.MemoryBlockStore} if you want to hold all headers in RAM and don't care about
      * disk serialization (this is rare).</p>
      */
     public BlockChain(Context context, Wallet wallet, BlockStore blockStore) throws BlockStoreException {

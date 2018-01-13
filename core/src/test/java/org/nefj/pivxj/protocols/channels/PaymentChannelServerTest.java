@@ -12,12 +12,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.TransactionBroadcaster;
-import org.pivxj.core.Utils;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.Coin;
+import org.nefj.core.TransactionBroadcaster;
+import org.nefj.core.Utils;
+import org.nefj.wallet.Wallet;
 import org.bitcoin.paymentchannel.Protos;
 import org.easymock.Capture;
 import org.junit.Before;

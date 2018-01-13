@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.store.BlockStoreException;
+import org.nefj.store.BlockStoreException;
 import org.darkcoinj.DarkSendSigner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +25,7 @@ import java.io.OutputStream;
 import java.io.Serializable;
 
 import static com.hashengineering.crypto.X11.x11Digest;
-import static org.pivxj.core.Utils.int64ToByteStreamLE;
+import static org.nefj.core.Utils.int64ToByteStreamLE;
 
 public class MasternodePing extends Message implements Serializable {
 

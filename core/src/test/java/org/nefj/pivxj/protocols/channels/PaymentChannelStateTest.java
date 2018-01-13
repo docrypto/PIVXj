@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.core.*;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.testing.TestWithWallet;
-import org.pivxj.wallet.SendRequest;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.*;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.testing.TestWithWallet;
+import org.nefj.wallet.SendRequest;
+import org.nefj.wallet.Wallet;
 
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -40,9 +40,9 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.testing.FakeTxBuilder.createFakeTx;
-import static org.pivxj.testing.FakeTxBuilder.makeSolvedTestBlock;
+import static org.nefj.core.Coin.*;
+import static org.nefj.testing.FakeTxBuilder.createFakeTx;
+import static org.nefj.testing.FakeTxBuilder.makeSolvedTestBlock;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)

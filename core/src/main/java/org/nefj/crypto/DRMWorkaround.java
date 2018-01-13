@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
-import org.pivxj.core.Utils;
+import org.nefj.core.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

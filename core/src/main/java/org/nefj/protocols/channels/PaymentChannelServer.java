@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
 import com.google.common.collect.ImmutableMap;
-import org.pivxj.core.*;
-import org.pivxj.protocols.channels.PaymentChannelCloseException.CloseReason;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.*;
+import org.nefj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

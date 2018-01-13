@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.*;
-import org.pivxj.utils.*;
+import org.nefj.core.*;
+import org.nefj.utils.*;
 import org.slf4j.*;
 
 import com.google.common.base.Stopwatch;

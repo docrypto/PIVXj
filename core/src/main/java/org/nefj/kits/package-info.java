@@ -13,7 +13,7 @@
  */
 
 /**
- * High level wrapper APIs around the pivxj building blocks. WalletAppKit is suitable for many different types of
+ * High level wrapper APIs around the nefj building blocks. WalletAppKit is suitable for many different types of
  * apps that require an SPV wallet.
  */
-package org.pivxj.kits;
+package org.nefj.kits;

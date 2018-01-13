@@ -12,14 +12,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
-import org.pivxj.core.Transaction.SigHash;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
+import org.nefj.core.Transaction.SigHash;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
 import com.google.common.base.Preconditions;
 
 import javax.annotation.Nullable;
@@ -30,8 +30,8 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.*;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.script.ScriptOpCodes.*;
+import static org.nefj.core.Coin.*;
+import static org.nefj.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
 

@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.listeners.PeerConnectedEventListener;
-import org.pivxj.core.listeners.PeerDisconnectedEventListener;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Peer;
-import org.pivxj.core.PeerGroup;
-import org.pivxj.net.discovery.DnsDiscovery;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.utils.BriefLogFormatter;
+import org.nefj.core.listeners.PeerConnectedEventListener;
+import org.nefj.core.listeners.PeerDisconnectedEventListener;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Peer;
+import org.nefj.core.PeerGroup;
+import org.nefj.net.discovery.DnsDiscovery;
+import org.nefj.params.MainNetParams;
+import org.nefj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 
 import javax.swing.*;

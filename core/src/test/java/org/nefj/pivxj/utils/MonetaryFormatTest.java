@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import static org.pivxj.core.Coin.CENT;
-import static org.pivxj.core.Coin.COIN;
-import static org.pivxj.core.Coin.SATOSHI;
-import static org.pivxj.core.Coin.ZERO;
+import static org.nefj.core.Coin.CENT;
+import static org.nefj.core.Coin.COIN;
+import static org.nefj.core.Coin.SATOSHI;
+import static org.nefj.core.Coin.ZERO;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Locale;
 
 import org.junit.Test;
 
-import org.pivxj.core.Coin;
+import org.nefj.core.Coin;
 
 public class MonetaryFormatTest {
 

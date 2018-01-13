@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.util.concurrent.*;
-import org.pivxj.core.listeners.TransactionConfidenceEventListener;
-import org.pivxj.testing.*;
-import org.pivxj.utils.*;
-import org.pivxj.wallet.SendRequest;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.listeners.TransactionConfidenceEventListener;
+import org.nefj.testing.*;
+import org.nefj.utils.*;
+import org.nefj.wallet.SendRequest;
+import org.nefj.wallet.Wallet;
 import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
@@ -31,7 +31,7 @@ import java.util.*;
 import java.util.concurrent.*;
 
 import static com.google.common.base.Preconditions.*;
-import static org.pivxj.core.Coin.*;
+import static org.nefj.core.Coin.*;
 import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)

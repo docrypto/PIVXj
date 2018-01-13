@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.payments;
+package org.nefj.protocols.payments;
 
 import java.security.cert.X509Certificate;
 import java.util.List;

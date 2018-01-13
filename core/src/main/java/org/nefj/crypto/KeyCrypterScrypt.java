@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
 import com.google.common.base.Objects;
 import com.google.protobuf.ByteString;
 import com.lambdaworks.crypto.SCrypt;
-import org.pivxj.core.Utils;
-import org.pivxj.wallet.Protos;
-import org.pivxj.wallet.Protos.ScryptParameters;
-import org.pivxj.wallet.Protos.Wallet.EncryptionType;
+import org.nefj.core.Utils;
+import org.nefj.wallet.Protos;
+import org.nefj.wallet.Protos.ScryptParameters;
+import org.nefj.wallet.Protos.Wallet.EncryptionType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.crypto.BufferedBlockCipher;

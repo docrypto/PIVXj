@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.payments;
+package org.nefj.protocols.payments;
 
-import org.pivxj.core.*;
-import org.pivxj.crypto.X509Utils;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.protocols.payments.PaymentProtocol.Output;
-import org.pivxj.protocols.payments.PaymentProtocol.PkiVerificationData;
-import org.pivxj.protocols.payments.PaymentProtocolException.PkiVerificationException;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.testing.FakeTxBuilder;
+import org.nefj.core.*;
+import org.nefj.crypto.X509Utils;
+import org.nefj.params.TestNet3Params;
+import org.nefj.params.UnitTestParams;
+import org.nefj.protocols.payments.PaymentProtocol.Output;
+import org.nefj.protocols.payments.PaymentProtocol.PkiVerificationData;
+import org.nefj.protocols.payments.PaymentProtocolException.PkiVerificationException;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.testing.FakeTxBuilder;
 import org.bitcoin.protocols.payments.Protos;
 import org.bitcoin.protocols.payments.Protos.Payment;
 import org.bitcoin.protocols.payments.Protos.PaymentACK;

@@ -12,26 +12,26 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.*;
-import org.pivxj.kits.WalletAppKit;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.script.Script;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.listeners.KeyChainEventListener;
-import org.pivxj.wallet.listeners.ScriptsChangeEventListener;
-import org.pivxj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.pivxj.wallet.listeners.WalletCoinsSentEventListener;
+import org.nefj.core.*;
+import org.nefj.kits.WalletAppKit;
+import org.nefj.params.TestNet3Params;
+import org.nefj.script.Script;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.listeners.KeyChainEventListener;
+import org.nefj.wallet.listeners.ScriptsChangeEventListener;
+import org.nefj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.nefj.wallet.listeners.WalletCoinsSentEventListener;
 
 import java.io.File;
 import java.util.List;
 
-import org.pivxj.core.listeners.TransactionConfidenceEventListener;
+import org.nefj.core.listeners.TransactionConfidenceEventListener;
 
 /**
- * The following example shows how to use the by pivxj provided WalletAppKit.
- * The WalletAppKit class wraps the boilerplate (Peers, BlockChain, BlockStorage, Wallet) needed to set up a new SPV pivxj app.
+ * The following example shows how to use the by nefj provided WalletAppKit.
+ * The WalletAppKit class wraps the boilerplate (Peers, BlockChain, BlockStorage, Wallet) needed to set up a new SPV nefj app.
  * 
  * In this example we also define a WalletEventListener class with implementors that are called when the wallet changes (for example sending/receiving money)
  */
@@ -59,7 +59,7 @@ public class Kit {
         //kit.connectToLocalHost();
 
         // Now we start the kit and sync the blockchain.
-        // pivxj is working a lot with the Google Guava libraries. The WalletAppKit extends the AbstractIdleService. Have a look at the introduction to Guava services: https://github.com/google/guava/wiki/ServiceExplained
+        // nefj is working a lot with the Google Guava libraries. The WalletAppKit extends the AbstractIdleService. Have a look at the introduction to Guava services: https://github.com/google/guava/wiki/ServiceExplained
         kit.startAsync();
         kit.awaitRunning();
 

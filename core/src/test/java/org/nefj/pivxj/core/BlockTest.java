@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.io.ByteStreams;
 
-import org.pivxj.core.AbstractBlockChain.NewBlockType;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet2Params;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.script.ScriptOpCodes;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.Wallet.BalanceType;
+import org.nefj.core.AbstractBlockChain.NewBlockType;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet2Params;
+import org.nefj.params.TestNet3Params;
+import org.nefj.params.UnitTestParams;
+import org.nefj.script.ScriptOpCodes;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.Wallet.BalanceType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,7 +35,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
 
-import static org.pivxj.core.Utils.HEX;
+import static org.nefj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class BlockTest {

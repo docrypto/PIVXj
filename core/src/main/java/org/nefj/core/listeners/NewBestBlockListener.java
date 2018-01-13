@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.core.listeners;
+package org.nefj.core.listeners;
 
-import org.pivxj.core.StoredBlock;
-import org.pivxj.core.VerificationException;
+import org.nefj.core.StoredBlock;
+import org.nefj.core.VerificationException;
 
 /**
  * Listener interface for when a new block on the best chain is seen.
@@ -26,8 +26,8 @@ public interface NewBestBlockListener {
     /**
      * Called when a new block on the best chain is seen, after relevant
      * transactions are extracted and sent to us via either
-     * {@link TransactionReceivedInBlockListener#receiveFromBlock(org.pivxj.core.Transaction, org.pivxj.core.StoredBlock, org.pivxj.core.BlockChain.NewBlockType, int relativityOffset)}
-     * or {@link TransactionReceivedInBlockListener#notifyTransactionIsInBlock(org.pivxj.core.Sha256Hash, org.pivxj.core.StoredBlock, org.pivxj.core.BlockChain.NewBlockType, int)}.
+     * {@link TransactionReceivedInBlockListener#receiveFromBlock(org.nefj.core.Transaction, org.nefj.core.StoredBlock, org.nefj.core.BlockChain.NewBlockType, int relativityOffset)}
+     * or {@link TransactionReceivedInBlockListener#notifyTransactionIsInBlock(org.nefj.core.Sha256Hash, org.nefj.core.StoredBlock, org.nefj.core.BlockChain.NewBlockType, int)}.
      * If this block is causing a re-organise to a new chain, this method is NOT
      * called even though the block may be the new best block: your reorganize
      * implementation is expected to do whatever would normally be done do for a

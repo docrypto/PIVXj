@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
 public class HDDerivationException extends RuntimeException {
     public HDDerivationException(String message) {

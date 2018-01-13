@@ -12,13 +12,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Transaction;
-import org.pivxj.core.TransactionConfidence;
-import org.pivxj.core.TransactionOutput;
+import org.nefj.core.Coin;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Transaction;
+import org.nefj.core.TransactionConfidence;
+import org.nefj.core.TransactionOutput;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.math.BigInteger;

@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.net.discovery;
+package org.nefj.net.discovery;
 
 import com.google.common.annotations.*;
 import com.google.protobuf.*;
 import com.squareup.okhttp.*;
 import org.bitcoin.crawler.*;
-import org.pivxj.core.*;
+import org.nefj.core.*;
 import org.slf4j.*;
 
 import javax.annotation.*;

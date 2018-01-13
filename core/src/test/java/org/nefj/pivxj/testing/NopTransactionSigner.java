@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.testing;
+package org.nefj.testing;
 
-import org.pivxj.signers.TransactionSigner;
-import org.pivxj.wallet.KeyBag;
+import org.nefj.signers.TransactionSigner;
+import org.nefj.wallet.KeyBag;
 
 public class NopTransactionSigner implements TransactionSigner {
     private boolean isReady;

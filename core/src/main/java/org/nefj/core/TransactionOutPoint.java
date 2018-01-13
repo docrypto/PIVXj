@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.base.Objects;
-import org.pivxj.script.*;
-import org.pivxj.wallet.*;
+import org.nefj.script.*;
+import org.nefj.wallet.*;
 
 import javax.annotation.*;
 import java.io.*;
@@ -130,7 +130,7 @@ public class TransactionOutPoint extends ChildMessage {
 
     /**
      * Returns the ECKey identified in the connected output, for either pay-to-address scripts or pay-to-key scripts.
-     * For P2SH scripts you can use {@link #getConnectedRedeemData(org.pivxj.wallet.KeyBag)} and then get the
+     * For P2SH scripts you can use {@link #getConnectedRedeemData(org.nefj.wallet.KeyBag)} and then get the
      * key from RedeemData.
      * If the script form cannot be understood, throws ScriptException.
      *

@@ -1,6 +1,6 @@
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.store.BlockStore;
+import org.nefj.store.BlockStore;
 import org.darkcoinj.DarkSend;
 import org.darkcoinj.InstantSend;
 

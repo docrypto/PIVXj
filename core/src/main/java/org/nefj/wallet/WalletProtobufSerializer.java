@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.*;
-import org.pivxj.core.TransactionConfidence.ConfidenceType;
-import org.pivxj.crypto.KeyCrypter;
-import org.pivxj.crypto.KeyCrypterScrypt;
-import org.pivxj.script.Script;
-import org.pivxj.signers.LocalTransactionSigner;
-import org.pivxj.signers.TransactionSigner;
-import org.pivxj.utils.ExchangeRate;
-import org.pivxj.utils.Fiat;
-import org.pivxj.wallet.Protos.Wallet.EncryptionType;
+import org.nefj.core.*;
+import org.nefj.core.TransactionConfidence.ConfidenceType;
+import org.nefj.crypto.KeyCrypter;
+import org.nefj.crypto.KeyCrypterScrypt;
+import org.nefj.script.Script;
+import org.nefj.signers.LocalTransactionSigner;
+import org.nefj.signers.TransactionSigner;
+import org.nefj.utils.ExchangeRate;
+import org.nefj.utils.Fiat;
+import org.nefj.wallet.Protos.Wallet.EncryptionType;
 
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
@@ -54,7 +54,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * a data interchange format developed by Google with an efficient binary representation, a type safe specification
  * language and compilers that generate code to work with those data structures for many languages. Protocol buffers
  * can have their format evolved over time: conceptually they represent data using (tag, length, value) tuples. The
- * format is defined by the <tt>wallet.proto</tt> file in the pivxj source distribution.<p>
+ * format is defined by the <tt>wallet.proto</tt> file in the nefj source distribution.<p>
  *
  * This class is used through its static methods. The most common operations are writeWallet and readWallet, which do
  * the obvious operations on Output/InputStreams. You can use a {@link java.io.ByteArrayInputStream} and equivalent
@@ -679,7 +679,7 @@ public class WalletProtobufSerializer {
     }
 
     private WalletTransaction connectTransactionOutputs(final NetworkParameters params,
-                                                        final org.pivxj.wallet.Protos.Transaction txProto) throws UnreadableWalletException {
+                                                        final org.nefj.wallet.Protos.Transaction txProto) throws UnreadableWalletException {
         Transaction tx = txMap.get(txProto.getHash());
         final WalletTransaction.Pool pool;
         switch (txProto.getPool()) {

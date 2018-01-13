@@ -15,19 +15,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.core.TransactionConfidence.*;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.params.*;
-import org.pivxj.script.*;
-import org.pivxj.testing.*;
+import org.nefj.core.TransactionConfidence.*;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.params.*;
+import org.nefj.script.*;
+import org.nefj.testing.*;
 import org.easymock.*;
 import org.junit.*;
 
 import java.math.BigInteger;
 import java.util.*;
-import static org.pivxj.core.Utils.HEX;
+import static org.nefj.core.Utils.HEX;
 
 import static org.easymock.EasyMock.*;
 import static org.junit.Assert.*;

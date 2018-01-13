@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import org.pivxj.core.CoinDefinition;
-import org.pivxj.utils.BtcAutoFormat.Style;
-import static org.pivxj.utils.BtcAutoFormat.Style.*;
+import org.nefj.core.CoinDefinition;
+import org.nefj.utils.BtcAutoFormat.Style;
+import static org.nefj.utils.BtcAutoFormat.Style.*;
 
-import org.pivxj.core.Coin;
+import org.nefj.core.Coin;
 import com.google.common.base.Objects;
 import com.google.common.collect.ImmutableList;
 import static com.google.common.base.Preconditions.checkArgument;
@@ -262,7 +262,7 @@ import java.util.regex.Pattern;
  * <h3>Formatting</h3>
  *
  * <p>You format a Bitcoin monetary value by passing it to the {@link BtcFormat#format(Object)}
- * method.  This argument can be either a {@link org.pivxj.core.Coin}-type object or a
+ * method.  This argument can be either a {@link org.nefj.core.Coin}-type object or a
  * numerical object such as {@link java.lang.Long} or {@link java.math.BigDecimal}.
  * Integer-based types such as {@link java.math.BigInteger} are interpreted as representing a
  * number of satoshis, while a {@link java.math.BigDecimal} is interpreted as representing a
@@ -465,7 +465,7 @@ import java.util.regex.Pattern;
  * @see          java.text.DecimalFormat
  * @see          java.text.DecimalFormatSymbols
  * @see          java.text.FieldPosition
- * @see          org.pivxj.core.Coin
+ * @see          org.nefj.core.Coin
  */
 
 public abstract class BtcFormat extends Format {
@@ -1302,7 +1302,7 @@ public abstract class BtcFormat extends Format {
 
     /**
       * Parse a <code>String</code> representation of a Bitcoin monetary value.  Returns a
-      * {@link org.pivxj.core.Coin} object that represents the parsed value.
+      * {@link org.nefj.core.Coin} object that represents the parsed value.
       * @see java.text.NumberFormat */
     @Override
     public final Object parseObject(String source, ParsePosition pos) { return parse(source, pos); }

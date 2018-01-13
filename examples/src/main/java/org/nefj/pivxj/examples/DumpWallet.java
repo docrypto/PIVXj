@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
 import java.io.File;
 
-import org.pivxj.wallet.Wallet;
+import org.nefj.wallet.Wallet;
 
 /**
  * DumpWallet loads a serialized wallet and prints information about what it contains.

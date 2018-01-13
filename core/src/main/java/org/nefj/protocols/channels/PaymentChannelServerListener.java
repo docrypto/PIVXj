@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.Sha256Hash;
-import org.pivxj.core.TransactionBroadcaster;
-import org.pivxj.net.NioServer;
-import org.pivxj.net.ProtobufConnection;
-import org.pivxj.net.StreamConnectionFactory;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.Coin;
+import org.nefj.core.Sha256Hash;
+import org.nefj.core.TransactionBroadcaster;
+import org.nefj.net.NioServer;
+import org.nefj.net.ProtobufConnection;
+import org.nefj.net.StreamConnectionFactory;
+import org.nefj.wallet.Wallet;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;

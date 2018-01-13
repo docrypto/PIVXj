@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.net.InetAddresses;
-import org.pivxj.params.MainNetParams;
+import org.nefj.params.MainNetParams;
 
 import java.io.IOException;
 import java.io.OutputStream;

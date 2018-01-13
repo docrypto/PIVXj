@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.net;
+package org.nefj.net;
 
-import org.pivxj.core.Utils;
+import org.nefj.core.Utils;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
 import org.bitcoin.paymentchannel.Protos;

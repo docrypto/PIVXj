@@ -14,6 +14,6 @@
 
 /**
  * Formatting monetary amounts, representing exchange rates, a program for loading Bitcoin Core saved block files,
- * a class to control how pivxj uses threads and misc other utility classes that don't fit anywhere else.
+ * a class to control how nefj uses threads and misc other utility classes that don't fit anywhere else.
  */
-package org.pivxj.utils;
+package org.nefj.utils;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -51,7 +51,7 @@ public class BriefLogFormatter extends Formatter {
 
     public static void initWithSilentBitcoinJ() {
         init();
-        Logger.getLogger("org.pivxj").setLevel(Level.SEVERE);
+        Logger.getLogger("org.nefj").setLevel(Level.SEVERE);
     }
 
     @Override

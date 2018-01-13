@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
 
-import org.pivxj.core.BloomFilter;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Utils;
-import org.pivxj.crypto.DeterministicKey;
-import org.pivxj.crypto.KeyCrypter;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
+import org.nefj.core.BloomFilter;
+import org.nefj.core.ECKey;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Utils;
+import org.nefj.crypto.DeterministicKey;
+import org.nefj.crypto.KeyCrypter;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

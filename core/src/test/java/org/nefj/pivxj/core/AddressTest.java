@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.Networks;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.Networks;
+import org.nefj.params.TestNet3Params;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
@@ -31,7 +31,7 @@ import java.io.ObjectOutputStream;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.pivxj.core.Utils.HEX;
+import static org.nefj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class AddressTest {

@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.store;
+package org.nefj.store;
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,7 +34,7 @@ import java.util.List;
 
 /**
  * <p>A full pruned block store using the Postgres database engine. As an added bonus an address index is calculated,
- * so you can use {@link #calculateBalanceForAddress(org.pivxj.core.Address)} to quickly look up
+ * so you can use {@link #calculateBalanceForAddress(org.nefj.core.Address)} to quickly look up
  * the quantity of bitcoins controlled by that address.</p>
  */
 public class PostgresFullPrunedBlockStore extends DatabaseFullPrunedBlockStore {
@@ -209,7 +209,7 @@ public class PostgresFullPrunedBlockStore extends DatabaseFullPrunedBlockStore {
                 findS.close();
 
                 // Postgres insert-or-updates are very complex (and finnicky).  This level of transaction isolation
-                // seems to work for pivxj
+                // seems to work for nefj
                 PreparedStatement s =
                         conn.get().prepareStatement(getUpdateUndoableBlocksSQL());
                 s.setBytes(3, hashBytes);

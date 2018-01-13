@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.params.UnitTestParams;
+import org.nefj.params.UnitTestParams;
 import org.junit.Test;
 
-import static org.pivxj.core.Utils.HEX;
+import static org.nefj.core.Utils.HEX;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -34,17 +34,17 @@ public class VersionMessageTest {
         VersionMessage ver = new VersionMessage(params, HEX.decode("7111010000000000000000003334a85500000000000000000000000000000000000000000000ffff7f000001479d000000000000000000000000000000000000ffff7f000001479d00000000000000000f2f626974636f696e6a3a302e31332f0004000000"));
         assertFalse(ver.relayTxesBeforeFilter);
         assertEquals(1024, ver.bestHeight);
-        assertEquals("/pivxj:0.13/", ver.subVer);
+        assertEquals("/nefj:0.13/", ver.subVer);
 
         ver = new VersionMessage(params, HEX.decode("711101000000000000000000a634a85500000000000000000000000000000000000000000000ffff7f000001479d000000000000000000000000000000000000ffff7f000001479d00000000000000000f2f626974636f696e6a3a302e31332f0004000001"));
         assertTrue(ver.relayTxesBeforeFilter);
         assertEquals(1024, ver.bestHeight);
-        assertEquals("/pivxj:0.13/", ver.subVer);
+        assertEquals("/nefj:0.13/", ver.subVer);
 
         ver = new VersionMessage(params, HEX.decode("711101000000000000000000c334a85500000000000000000000000000000000000000000000ffff7f000001479d000000000000000000000000000000000000ffff7f000001479d00000000000000000f2f626974636f696e6a3a302e31332f0000000001"));
         assertTrue(ver.relayTxesBeforeFilter);
         assertEquals(0, ver.bestHeight);
-        assertEquals("/pivxj:0.13/", ver.subVer);
+        assertEquals("/nefj:0.13/", ver.subVer);
 
         ver = new VersionMessage(params, HEX.decode("71110100000000000000000048e5e95000000000000000000000000000000000000000000000ffff7f000001479d000000000000000000000000000000000000ffff7f000001479d0000000000000000"));
         assertTrue(ver.relayTxesBeforeFilter);

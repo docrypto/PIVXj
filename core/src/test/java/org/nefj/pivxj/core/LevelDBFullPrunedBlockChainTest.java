@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.store.FullPrunedBlockStore;
-import org.pivxj.store.LevelDBFullPrunedBlockStore;
+import org.nefj.store.BlockStoreException;
+import org.nefj.store.FullPrunedBlockStore;
+import org.nefj.store.LevelDBFullPrunedBlockStore;
 import org.junit.After;
 
 import java.io.File;

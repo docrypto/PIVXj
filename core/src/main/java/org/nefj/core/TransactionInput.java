@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.script.Script;
-import org.pivxj.wallet.DefaultRiskAnalysis;
-import org.pivxj.wallet.KeyBag;
-import org.pivxj.wallet.RedeemData;
+import org.nefj.script.Script;
+import org.nefj.wallet.DefaultRiskAnalysis;
+import org.nefj.wallet.KeyBag;
+import org.nefj.wallet.RedeemData;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
@@ -301,7 +301,7 @@ public class TransactionInput extends ChildMessage {
 
     /**
      * Alias for getOutpoint().getConnectedRedeemData(keyBag)
-     * @see TransactionOutPoint#getConnectedRedeemData(org.pivxj.wallet.KeyBag)
+     * @see TransactionOutPoint#getConnectedRedeemData(org.nefj.wallet.KeyBag)
      */
     @Nullable
     public RedeemData getConnectedRedeemData(KeyBag keyBag) throws ScriptException {

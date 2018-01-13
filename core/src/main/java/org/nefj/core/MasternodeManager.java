@@ -1,12 +1,12 @@
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.utils.ListenerRegistration;
-import org.pivxj.utils.Pair;
-import org.pivxj.utils.Threading;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
+import org.nefj.utils.ListenerRegistration;
+import org.nefj.utils.Pair;
+import org.nefj.utils.Threading;
 import org.darkcoinj.DarkSendSigner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.locks.ReentrantLock;
 
 import static com.google.common.base.Preconditions.checkState;
-import static org.pivxj.core.MasterNodeSystem.MASTERNODE_REMOVAL_SECONDS;
+import static org.nefj.core.MasterNodeSystem.MASTERNODE_REMOVAL_SECONDS;
 
 /**
  * Created by Hash Engineering on 2/20/2016.

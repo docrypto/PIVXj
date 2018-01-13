@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import static org.pivxj.utils.Fiat.parseFiat;
+import static org.nefj.utils.Fiat.parseFiat;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;

@@ -12,13 +12,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Utils;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.wallet.DeterministicSeed;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Utils;
+import org.nefj.params.TestNet3Params;
+import org.nefj.wallet.DeterministicSeed;
+import org.nefj.wallet.Wallet;
 
 /**
  * The following example shows you how to create a deterministic seed from a hierarchical deterministic wallet represented as a mnemonic code.

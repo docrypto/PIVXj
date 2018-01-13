@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 import joptsimple.OptionSpec;
-import org.pivxj.core.Coin;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Sha256Hash;
-import org.pivxj.core.VerificationException;
-import org.pivxj.kits.WalletAppKit;
-import org.pivxj.params.RegTestParams;
-import org.pivxj.protocols.channels.*;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.WalletExtension;
+import org.nefj.core.Coin;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Sha256Hash;
+import org.nefj.core.VerificationException;
+import org.nefj.kits.WalletAppKit;
+import org.nefj.params.RegTestParams;
+import org.nefj.protocols.channels.*;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.WalletExtension;
 
 import com.google.common.collect.ImmutableList;
 

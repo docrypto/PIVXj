@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet.listeners;
+package org.nefj.wallet.listeners;
 
-import org.pivxj.core.ECKey;
-import org.pivxj.wallet.KeyChain;
+import org.nefj.core.ECKey;
+import org.nefj.wallet.KeyChain;
 
 import java.util.List;
 

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.collect.*;
-import org.pivxj.core.listeners.*;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.testing.FakeTxBuilder;
-import org.pivxj.testing.InboundMessageQueuer;
-import org.pivxj.testing.TestWithNetworkConnections;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.nefj.core.listeners.*;
+import org.nefj.params.TestNet3Params;
+import org.nefj.testing.FakeTxBuilder;
+import org.nefj.testing.InboundMessageQueuer;
+import org.nefj.testing.TestWithNetworkConnections;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.listeners.WalletCoinsReceivedEventListener;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
@@ -52,8 +52,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.testing.FakeTxBuilder.*;
+import static org.nefj.core.Coin.*;
+import static org.nefj.testing.FakeTxBuilder.*;
 import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)

@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
 import com.google.common.collect.Maps;
 import com.google.protobuf.ByteString;

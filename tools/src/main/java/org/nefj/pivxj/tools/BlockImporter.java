@@ -12,23 +12,23 @@
  * limitations under the License.
  */
 
-package org.pivxj.tools;
+package org.nefj.tools;
 
-import org.pivxj.core.*;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.store.*;
-import org.pivxj.utils.BlockFileLoader;
+import org.nefj.core.*;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet3Params;
+import org.nefj.store.*;
+import org.nefj.utils.BlockFileLoader;
 import com.google.common.base.Preconditions;
 
 import java.io.File;
 
-/** Very thin wrapper around {@link org.pivxj.utils.BlockFileLoader} */
+/** Very thin wrapper around {@link org.nefj.utils.BlockFileLoader} */
 public class BlockImporter {
     public static void main(String[] args) throws BlockStoreException, VerificationException, PrunedException {
         System.out.println("USAGE: BlockImporter (prod|test) (H2|Disk|MemFull|Mem|SPV) [blockStore]");
         System.out.println("       blockStore is required unless type is Mem or MemFull");
-        System.out.println("       eg BlockImporter prod H2 /home/user/pivxj.h2store");
+        System.out.println("       eg BlockImporter prod H2 /home/user/nefj.h2store");
         System.out.println("       Does full verification if the store supports it");
         Preconditions.checkArgument(args.length == 2 || args.length == 3);
         

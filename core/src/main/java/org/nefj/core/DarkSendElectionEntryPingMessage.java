@@ -1,4 +1,4 @@
-package org.pivxj.core;
+package org.nefj.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import static org.pivxj.core.Utils.int64ToByteStreamLE;
+import static org.nefj.core.Utils.int64ToByteStreamLE;
 
 /**
  * Created by Eric on 2/10/2015.

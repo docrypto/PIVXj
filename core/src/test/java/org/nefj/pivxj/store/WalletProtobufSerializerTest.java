@@ -15,30 +15,30 @@
  * limitations under the License.
  */
 
-package org.pivxj.store;
+package org.nefj.store;
 
-import org.pivxj.core.*;
-import org.pivxj.core.Transaction.Purpose;
-import org.pivxj.core.TransactionConfidence.ConfidenceType;
-import org.pivxj.crypto.DeterministicKey;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.testing.FakeTxBuilder;
-import org.pivxj.testing.FooWalletExtension;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.DeterministicKeyChain;
-import org.pivxj.wallet.KeyChain;
+import org.nefj.core.*;
+import org.nefj.core.Transaction.Purpose;
+import org.nefj.core.TransactionConfidence.ConfidenceType;
+import org.nefj.crypto.DeterministicKey;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.UnitTestParams;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.testing.FakeTxBuilder;
+import org.nefj.testing.FooWalletExtension;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.DeterministicKeyChain;
+import org.nefj.wallet.KeyChain;
 import com.google.protobuf.ByteString;
 
-import org.pivxj.wallet.MarriedKeyChain;
-import org.pivxj.wallet.Protos;
-import org.pivxj.wallet.UnreadableWalletException;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletExtension;
-import org.pivxj.wallet.WalletProtobufSerializer;
-import org.pivxj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.nefj.wallet.MarriedKeyChain;
+import org.nefj.wallet.Protos;
+import org.nefj.wallet.UnreadableWalletException;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletExtension;
+import org.nefj.wallet.WalletProtobufSerializer;
+import org.nefj.wallet.listeners.WalletCoinsReceivedEventListener;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -52,8 +52,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.testing.FakeTxBuilder.createFakeTx;
+import static org.nefj.core.Coin.*;
+import static org.nefj.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 

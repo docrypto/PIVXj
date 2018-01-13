@@ -15,21 +15,21 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
 import com.google.common.collect.*;
-import org.pivxj.core.*;
-import org.pivxj.crypto.*;
-import org.pivxj.params.*;
-import org.pivxj.script.*;
-import org.pivxj.testing.FakeTxBuilder;
-import org.pivxj.wallet.DefaultRiskAnalysis.*;
+import org.nefj.core.*;
+import org.nefj.crypto.*;
+import org.nefj.params.*;
+import org.nefj.script.*;
+import org.nefj.testing.FakeTxBuilder;
+import org.nefj.wallet.DefaultRiskAnalysis.*;
 import org.junit.*;
 
 import java.util.*;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.script.ScriptOpCodes.*;
+import static org.nefj.core.Coin.*;
+import static org.nefj.script.ScriptOpCodes.*;
 import static org.junit.Assert.*;
 
 public class DefaultRiskAnalysisTest {

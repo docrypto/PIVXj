@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.net.discovery;
+package org.nefj.net.discovery;
 
-import org.pivxj.core.NetworkParameters;
+import org.nefj.core.NetworkParameters;
 
 import javax.annotation.Nullable;
 import java.net.InetAddress;

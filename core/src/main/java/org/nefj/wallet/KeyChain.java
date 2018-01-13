@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.BloomFilter;
-import org.pivxj.core.ECKey;
-import org.pivxj.wallet.listeners.KeyChainEventListener;
+import org.nefj.core.BloomFilter;
+import org.nefj.core.ECKey;
+import org.nefj.wallet.listeners.KeyChainEventListener;
 
 import java.util.List;
 import java.util.concurrent.Executor;
 
 /**
- * <p>A KeyChain is a class that stores a collection of keys for a {@link org.pivxj.wallet.Wallet}. Key chains
+ * <p>A KeyChain is a class that stores a collection of keys for a {@link org.nefj.wallet.Wallet}. Key chains
  * are expected to be able to look up keys given a hash (i.e. address) or pubkey bytes, and provide keys on request
  * for a given purpose. They can inform event listeners about new keys being added.</p>
  *
@@ -51,7 +51,7 @@ public interface KeyChain {
     /** Obtains a key intended for the given purpose. The chain may create a new key, derive one, or re-use an old one. */
     ECKey getKey(KeyPurpose purpose);
 
-    /** Returns a list of keys serialized to the pivxj protobuf format. */
+    /** Returns a list of keys serialized to the nefj protobuf format. */
     List<Protos.Key> serializeToProtobuf();
 
     /** Adds a listener for events that are run when keys are added, on the user thread. */
@@ -88,7 +88,7 @@ public interface KeyChain {
      * <p>This is used to generate a {@link BloomFilter} which can be {@link BloomFilter#merge(BloomFilter)}d with
      * another. It could also be used if you have a specific target for the filter's size.</p>
      *
-     * <p>See the docs for {@link org.pivxj.core.BloomFilter#BloomFilter(int, double, long)} for a brief
+     * <p>See the docs for {@link org.nefj.core.BloomFilter#BloomFilter(int, double, long)} for a brief
      * explanation of anonymity when using bloom filters, and for the meaning of these parameters.</p>
      */
     BloomFilter getFilter(int size, double falsePositiveRate, long tweak);

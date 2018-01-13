@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.uri;
+package org.nefj.uri;
 
 /**
- * <p>Exception to provide the following to {@link PivxURI}:</p>
+ * <p>Exception to provide the following to {@link NefURI}:</p>
  * <ul>
  * <li>Provision of parsing error messages</li>
  * </ul>

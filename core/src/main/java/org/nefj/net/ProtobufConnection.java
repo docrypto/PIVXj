@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.net;
+package org.nefj.net;
 
-import org.pivxj.core.Utils;
-import org.pivxj.utils.Threading;
+import org.nefj.core.Utils;
+import org.nefj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.MessageLite;

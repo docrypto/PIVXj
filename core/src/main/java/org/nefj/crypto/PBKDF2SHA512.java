@@ -21,7 +21,7 @@
  * 
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;

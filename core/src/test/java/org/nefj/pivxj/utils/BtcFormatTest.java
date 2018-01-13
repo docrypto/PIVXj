@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import org.pivxj.core.Coin;
+import org.nefj.core.Coin;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -29,12 +29,12 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.core.NetworkParameters.MAX_MONEY;
-import static org.pivxj.utils.BtcAutoFormat.Style.CODE;
-import static org.pivxj.utils.BtcAutoFormat.Style.SYMBOL;
-import static org.pivxj.utils.BtcFixedFormat.REPEATING_DOUBLETS;
-import static org.pivxj.utils.BtcFixedFormat.REPEATING_TRIPLETS;
+import static org.nefj.core.Coin.*;
+import static org.nefj.core.NetworkParameters.MAX_MONEY;
+import static org.nefj.utils.BtcAutoFormat.Style.CODE;
+import static org.nefj.utils.BtcAutoFormat.Style.SYMBOL;
+import static org.nefj.utils.BtcFixedFormat.REPEATING_DOUBLETS;
+import static org.nefj.utils.BtcFixedFormat.REPEATING_TRIPLETS;
 import static java.text.NumberFormat.Field.DECIMAL_SEPARATOR;
 import static java.util.Locale.*;
 import static org.junit.Assert.*;

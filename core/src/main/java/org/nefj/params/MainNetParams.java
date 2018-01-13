@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.params;
+package org.nefj.params;
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 
 import static com.google.common.base.Preconditions.*;
 

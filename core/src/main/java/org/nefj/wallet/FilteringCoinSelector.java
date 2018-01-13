@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 
 import java.util.HashSet;
 import java.util.Iterator;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.crypto.KeyCrypter;
-import org.pivxj.crypto.KeyCrypterException;
+import org.nefj.crypto.KeyCrypter;
+import org.nefj.crypto.KeyCrypterException;
 import org.spongycastle.crypto.params.KeyParameter;
 
 import javax.annotation.Nullable;
@@ -28,8 +28,8 @@ import javax.annotation.Nullable;
 public interface EncryptableKeyChain extends KeyChain {
     /**
      * Takes the given password, which should be strong, derives a key from it and then invokes
-     * {@link #toEncrypted(org.pivxj.crypto.KeyCrypter, org.spongycastle.crypto.params.KeyParameter)} with
-     * {@link org.pivxj.crypto.KeyCrypterScrypt} as the crypter.
+     * {@link #toEncrypted(org.nefj.crypto.KeyCrypter, org.spongycastle.crypto.params.KeyParameter)} with
+     * {@link org.nefj.crypto.KeyCrypterScrypt} as the crypter.
      *
      * @return The derived key, in case you wish to cache it for future use.
      */
@@ -50,7 +50,7 @@ public interface EncryptableKeyChain extends KeyChain {
     /**
      * Decrypt the key chain with the given AES key and whatever {@link KeyCrypter} is already set. Note that if you
      * just want to spend money from an encrypted wallet, don't decrypt the whole thing first. Instead, set the
-     * {@link org.pivxj.wallet.SendRequest#aesKey} field before asking the wallet to build the send.
+     * {@link org.nefj.wallet.SendRequest#aesKey} field before asking the wallet to build the send.
      *
      * @param aesKey AES key to use (normally created using KeyCrypter#deriveKey and cached as it is time consuming to
      *               create from a password)

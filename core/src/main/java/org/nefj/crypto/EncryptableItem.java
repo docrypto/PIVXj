@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
-import org.pivxj.wallet.Protos;
+import org.nefj.wallet.Protos;
 
 import javax.annotation.Nullable;
 
 /**
  * Provides a uniform way to access something that can be optionally encrypted with a
- * {@link org.pivxj.crypto.KeyCrypter}, yielding an {@link org.pivxj.crypto.EncryptedData}, and
+ * {@link org.nefj.crypto.KeyCrypter}, yielding an {@link org.nefj.crypto.EncryptedData}, and
  * which can have a creation time associated with it.
  */
 public interface EncryptableItem {

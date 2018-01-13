@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.net.discovery;
+package org.nefj.net.discovery;
 
 import com.google.common.collect.Lists;
 import com.squareup.okhttp.OkHttpClient;
 
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.VersionMessage;
-import org.pivxj.net.discovery.DnsDiscovery.DnsSeedDiscovery;
-import org.pivxj.utils.*;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.VersionMessage;
+import org.nefj.net.discovery.DnsDiscovery.DnsSeedDiscovery;
+import org.nefj.utils.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

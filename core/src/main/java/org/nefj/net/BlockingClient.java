@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.net;
+package org.nefj.net;
 
 import com.google.common.util.concurrent.*;
-import org.pivxj.core.*;
+import org.nefj.core.*;
 import org.slf4j.*;
 
 import javax.annotation.*;

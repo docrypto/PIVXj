@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.*;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.*;
+import org.nefj.params.MainNetParams;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.wallet.Wallet;
 
 import java.math.BigInteger;
 import java.net.InetAddress;

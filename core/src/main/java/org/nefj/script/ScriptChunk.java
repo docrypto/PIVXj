@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.script;
+package org.nefj.script;
 
-import org.pivxj.core.Utils;
+import org.nefj.core.Utils;
 import com.google.common.base.Objects;
 
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ import java.io.OutputStream;
 import java.util.Arrays;
 
 import static com.google.common.base.Preconditions.checkState;
-import static org.pivxj.script.ScriptOpCodes.*;
+import static org.nefj.script.ScriptOpCodes.*;
 
 /**
  * A script element that is either a data push (signature, pubkey, etc) or a non-push (logic, numeric, etc) operation.

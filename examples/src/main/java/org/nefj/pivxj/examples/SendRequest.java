@@ -12,16 +12,16 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
-import org.pivxj.core.*;
-import org.pivxj.kits.WalletAppKit;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.Wallet.BalanceType;
+import org.nefj.core.*;
+import org.nefj.kits.WalletAppKit;
+import org.nefj.params.TestNet3Params;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.Wallet.BalanceType;
 
 import java.io.File;
 

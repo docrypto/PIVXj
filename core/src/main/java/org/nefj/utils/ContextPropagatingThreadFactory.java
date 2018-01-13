@@ -12,16 +12,16 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
 import com.google.common.base.*;
-import org.pivxj.core.*;
+import org.nefj.core.*;
 import org.slf4j.*;
 
 import java.util.concurrent.*;
 
 /**
- * A {@link java.util.concurrent.ThreadFactory} that propagates a {@link org.pivxj.core.Context} from the creating
+ * A {@link java.util.concurrent.ThreadFactory} that propagates a {@link org.nefj.core.Context} from the creating
  * thread into the new thread. This factory creates daemon threads.
  */
 public class ContextPropagatingThreadFactory implements ThreadFactory {

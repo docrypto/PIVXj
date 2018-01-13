@@ -12,10 +12,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.TransactionOutput;
+import org.nefj.core.Coin;
+import org.nefj.core.TransactionOutput;
 
 import java.util.Collection;
 

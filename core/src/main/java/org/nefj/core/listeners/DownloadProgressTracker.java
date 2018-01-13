@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.core.listeners;
+package org.nefj.core.listeners;
 
-import org.pivxj.core.Block;
-import org.pivxj.core.FilteredBlock;
-import org.pivxj.core.Peer;
-import org.pivxj.core.Utils;
+import org.nefj.core.Block;
+import org.nefj.core.FilteredBlock;
+import org.nefj.core.Peer;
+import org.nefj.core.Utils;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 import org.slf4j.Logger;

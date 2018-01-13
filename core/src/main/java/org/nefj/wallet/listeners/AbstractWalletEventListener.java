@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet.listeners;
+package org.nefj.wallet.listeners;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.Transaction;
-import org.pivxj.script.Script;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.Coin;
+import org.nefj.core.ECKey;
+import org.nefj.core.Transaction;
+import org.nefj.script.Script;
+import org.nefj.wallet.Wallet;
 
 import java.util.List;
 

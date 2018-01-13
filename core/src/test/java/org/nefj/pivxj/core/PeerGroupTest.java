@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.*;
 import com.google.common.net.*;
 import com.google.common.util.concurrent.*;
-import org.pivxj.core.listeners.*;
-import org.pivxj.net.discovery.*;
-import org.pivxj.testing.*;
-import org.pivxj.utils.*;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.listeners.*;
+import org.nefj.net.discovery.*;
+import org.nefj.testing.*;
+import org.nefj.utils.*;
+import org.nefj.wallet.Wallet;
 import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
@@ -36,7 +36,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.*;
 
-import static org.pivxj.core.Coin.*;
+import static org.nefj.core.Coin.*;
 import static org.junit.Assert.*;
 
 

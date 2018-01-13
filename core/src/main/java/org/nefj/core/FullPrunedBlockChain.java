@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.script.Script;
-import org.pivxj.script.Script.VerifyFlag;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.store.FullPrunedBlockStore;
-import org.pivxj.utils.*;
-import org.pivxj.wallet.Wallet;
+import org.nefj.script.Script;
+import org.nefj.script.Script.VerifyFlag;
+import org.nefj.store.BlockStoreException;
+import org.nefj.store.FullPrunedBlockStore;
+import org.nefj.utils.*;
+import org.nefj.wallet.Wallet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

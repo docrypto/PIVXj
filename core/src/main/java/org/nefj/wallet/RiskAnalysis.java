@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.Transaction;
+import org.nefj.core.Transaction;
 
 import java.util.List;
 

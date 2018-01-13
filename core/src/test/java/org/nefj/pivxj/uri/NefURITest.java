@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.pivxj.uri;
+package org.nefj.uri;
 
-import org.pivxj.core.Address;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet3Params;
+import org.nefj.core.Address;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet3Params;
 import com.google.common.collect.ImmutableList;
 import org.junit.Test;
-import org.pivxj.core.CoinDefinition;
+import org.nefj.core.CoinDefinition;
 
-import static org.pivxj.core.Coin.*;
-import org.pivxj.core.NetworkParameters;
+import static org.nefj.core.Coin.*;
+import org.nefj.core.NetworkParameters;
 import static org.junit.Assert.*;
 
-public class PivxURITest {
-    private PivxURI testObject = null;
+public class NefURITest {
+    private NefURI testObject = null;
 
     private static final NetworkParameters MAINNET = MainNetParams.get();
     private static final String MAINNET_GOOD_ADDRESS = CoinDefinition.UNITTEST_ADDRESS;
@@ -39,36 +39,36 @@ public class PivxURITest {
         Address goodAddress = Address.fromBase58(MAINNET, MAINNET_GOOD_ADDRESS);
         
         // simple example
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello&message=AMessage", PivxURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", "AMessage"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello&message=AMessage", NefURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", "AMessage"));
         
         // example with spaces, ampersand and plus
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello%20World&message=Mess%20%26%20age%20%2B%20hope", PivxURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello World", "Mess & age + hope"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello%20World&message=Mess%20%26%20age%20%2B%20hope", NefURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello World", "Mess & age + hope"));
 
         // no amount, label present, message present
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?label=Hello&message=glory", PivxURI.convertToBitcoinURI(goodAddress, null, "Hello", "glory"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?label=Hello&message=glory", NefURI.convertToBitcoinURI(goodAddress, null, "Hello", "glory"));
         
         // amount present, no label, message present
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", PivxURI.convertToBitcoinURI(goodAddress, parseCoin("0.1"), null, "glory"));
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", PivxURI.convertToBitcoinURI(goodAddress, parseCoin("0.1"), "", "glory"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", NefURI.convertToBitcoinURI(goodAddress, parseCoin("0.1"), null, "glory"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=0.1&message=glory", NefURI.convertToBitcoinURI(goodAddress, parseCoin("0.1"), "", "glory"));
 
         // amount present, label present, no message
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", PivxURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", null));
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", PivxURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", ""));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", NefURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", null));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello", NefURI.convertToBitcoinURI(goodAddress, parseCoin("12.34"), "Hello", ""));
               
         // amount present, no label, no message
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=1000", PivxURI.convertToBitcoinURI(goodAddress, parseCoin("1000"), null, null));
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=1000", PivxURI.convertToBitcoinURI(goodAddress, parseCoin("1000"), "", ""));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=1000", NefURI.convertToBitcoinURI(goodAddress, parseCoin("1000"), null, null));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?amount=1000", NefURI.convertToBitcoinURI(goodAddress, parseCoin("1000"), "", ""));
 
         // no amount, label present, no message
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?label=Hello", PivxURI.convertToBitcoinURI(goodAddress, null, "Hello", null));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?label=Hello", NefURI.convertToBitcoinURI(goodAddress, null, "Hello", null));
         
         // no amount, no label, message present
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?message=Agatha", PivxURI.convertToBitcoinURI(goodAddress, null, null, "Agatha"));
-        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?message=Agatha", PivxURI.convertToBitcoinURI(goodAddress, null, "", "Agatha"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?message=Agatha", NefURI.convertToBitcoinURI(goodAddress, null, null, "Agatha"));
+        assertEquals(CoinDefinition.coinURIScheme + ":" + MAINNET_GOOD_ADDRESS + "?message=Agatha", NefURI.convertToBitcoinURI(goodAddress, null, "", "Agatha"));
       
         // no amount, no label, no message
-        assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS, PivxURI.convertToBitcoinURI(goodAddress, null, null, null));
-        assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS, PivxURI.convertToBitcoinURI(goodAddress, null, "", ""));
+        assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS, NefURI.convertToBitcoinURI(goodAddress, null, null, null));
+        assertEquals("bitcoin:" + MAINNET_GOOD_ADDRESS, NefURI.convertToBitcoinURI(goodAddress, null, "", ""));
 
         // different scheme
         final NetworkParameters alternativeParameters = new MainNetParams() {
@@ -79,12 +79,12 @@ public class PivxURITest {
         };
 
         assertEquals("test:" + MAINNET_GOOD_ADDRESS + "?amount=12.34&label=Hello&message=AMessage",
-             PivxURI.convertToBitcoinURI(Address.fromBase58(alternativeParameters, MAINNET_GOOD_ADDRESS), parseCoin("12.34"), "Hello", "AMessage"));
+             NefURI.convertToBitcoinURI(Address.fromBase58(alternativeParameters, MAINNET_GOOD_ADDRESS), parseCoin("12.34"), "Hello", "AMessage"));
     }
 
     @Test
     public void testGood_Simple() throws BitcoinURIParseException {
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS);
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS);
         assertNotNull(testObject);
         assertNull("Unexpected amount", testObject.getAmount());
         assertNull("Unexpected label", testObject.getLabel());
@@ -97,7 +97,7 @@ public class PivxURITest {
     @Test
     public void testBad_Scheme() {
         try {
-            testObject = new PivxURI(MAINNET, "blimpcoin:" + MAINNET_GOOD_ADDRESS);
+            testObject = new NefURI(MAINNET, "blimpcoin:" + MAINNET_GOOD_ADDRESS);
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
         }
@@ -110,14 +110,14 @@ public class PivxURITest {
     public void testBad_BadSyntax() {
         // Various illegal characters
         try {
-            testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + "|" + MAINNET_GOOD_ADDRESS);
+            testObject = new NefURI(MAINNET, BITCOIN_SCHEME + "|" + MAINNET_GOOD_ADDRESS);
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad URI syntax"));
         }
 
         try {
-            testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "\\");
+            testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "\\");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad URI syntax"));
@@ -125,7 +125,7 @@ public class PivxURITest {
 
         // Separator without field
         try {
-            testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":");
+            testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad URI syntax"));
@@ -138,7 +138,7 @@ public class PivxURITest {
     @Test
     public void testBad_Address() {
         try {
-            testObject = new PivxURI(MAINNET, BITCOIN_SCHEME);
+            testObject = new NefURI(MAINNET, BITCOIN_SCHEME);
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
         }
@@ -150,7 +150,7 @@ public class PivxURITest {
     @Test
     public void testBad_IncorrectAddressType() {
         try {
-            testObject = new PivxURI(TestNet3Params.get(), BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS);
+            testObject = new NefURI(TestNet3Params.get(), BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS);
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
             assertTrue(e.getMessage().contains("Bad address"));
@@ -166,17 +166,17 @@ public class PivxURITest {
     @Test
     public void testGood_Amount() throws BitcoinURIParseException {
         // Test the decimal parsing
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=6543210.12345678");
         assertEquals("654321012345678", testObject.getAmount().toString());
 
         // Test the decimal parsing
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=.12345678");
         assertEquals("12345678", testObject.getAmount().toString());
 
         // Test the integer parsing
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=6543210");
         assertEquals("654321000000000", testObject.getAmount().toString());
     }
@@ -189,7 +189,7 @@ public class PivxURITest {
      */
     @Test
     public void testGood_Label() throws BitcoinURIParseException {
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?label=Hello%20World");
         assertEquals("Hello World", testObject.getLabel());
     }
@@ -203,8 +203,8 @@ public class PivxURITest {
     @Test
     public void testGood_LabelWithAmpersandAndPlus() throws BitcoinURIParseException {
         String testString = "Hello Earth & Mars + Venus";
-        String encodedLabel = PivxURI.encodeURLString(testString);
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "?label="
+        String encodedLabel = NefURI.encodeURLString(testString);
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "?label="
                 + encodedLabel);
         assertEquals(testString, testObject.getLabel());
     }
@@ -219,8 +219,8 @@ public class PivxURITest {
     public void testGood_LabelWithRussian() throws BitcoinURIParseException {
         // Moscow in Russian in Cyrillic
         String moscowString = "\u041c\u043e\u0441\u043a\u0432\u0430";
-        String encodedLabel = PivxURI.encodeURLString(moscowString);
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "?label="
+        String encodedLabel = NefURI.encodeURLString(moscowString);
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS + "?label="
                 + encodedLabel);
         assertEquals(moscowString, testObject.getLabel());
     }
@@ -233,7 +233,7 @@ public class PivxURITest {
      */
     @Test
     public void testGood_Message() throws BitcoinURIParseException {
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?message=Hello%20World");
         assertEquals("Hello World", testObject.getMessage());
     }
@@ -246,10 +246,10 @@ public class PivxURITest {
      */
     @Test
     public void testGood_Combinations() throws BitcoinURIParseException {
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=6543210&label=Hello%20World&message=Be%20well");
         assertEquals(
-                "PivxURI['amount'='654321000000000','label'='Hello World','message'='Be well','address'='"+CoinDefinition.UNITTEST_ADDRESS+"']",
+                "NefURI['amount'='654321000000000','label'='Hello World','message'='Be well','address'='"+CoinDefinition.UNITTEST_ADDRESS+"']",
                 testObject.toString());
     }
 
@@ -263,7 +263,7 @@ public class PivxURITest {
     public void testBad_Amount() throws BitcoinURIParseException {
         // Missing
         try {
-            testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?amount=");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -272,7 +272,7 @@ public class PivxURITest {
 
         // Non-decimal (BIP 21)
         try {
-            testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?amount=12X4");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -282,13 +282,13 @@ public class PivxURITest {
 
     @Test
     public void testEmpty_Label() throws BitcoinURIParseException {
-        assertNull(new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        assertNull(new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?label=").getLabel());
     }
 
     @Test
     public void testEmpty_Message() throws BitcoinURIParseException {
-        assertNull(new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        assertNull(new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?message=").getMessage());
     }
 
@@ -301,7 +301,7 @@ public class PivxURITest {
     @Test
     public void testBad_Duplicated() throws BitcoinURIParseException {
         try {
-            testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?address=aardvark");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -311,7 +311,7 @@ public class PivxURITest {
 
     @Test
     public void testGood_ManyEquals() throws BitcoinURIParseException {
-        assertEquals("aardvark=zebra", new PivxURI(MAINNET, BITCOIN_SCHEME + ":"
+        assertEquals("aardvark=zebra", new NefURI(MAINNET, BITCOIN_SCHEME + ":"
                 + MAINNET_GOOD_ADDRESS + "?label=aardvark=zebra").getLabel());
     }
     
@@ -324,15 +324,15 @@ public class PivxURITest {
     @Test
     public void testUnknown() throws BitcoinURIParseException {
         // Unknown not required field
-        testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?aardvark=true");
-        assertEquals("PivxURI['aardvark'='true','address'='"+CoinDefinition.UNITTEST_ADDRESS+"']", testObject.toString());
+        assertEquals("NefURI['aardvark'='true','address'='"+CoinDefinition.UNITTEST_ADDRESS+"']", testObject.toString());
 
         assertEquals("true", testObject.getParameterByName("aardvark"));
 
         // Unknown not required field (isolated)
         try {
-            testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?aardvark");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -341,7 +341,7 @@ public class PivxURITest {
 
         // Unknown and required field
         try {
-            testObject = new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+            testObject = new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                     + "?req-aardvark=true");
             fail("Expecting BitcoinURIParseException");
         } catch (BitcoinURIParseException e) {
@@ -353,33 +353,33 @@ public class PivxURITest {
     public void brokenURIs() throws BitcoinURIParseException {
         // Check we can parse the incorrectly formatted URIs produced by blockchain.info and its iPhone app.
         String str = CoinDefinition.coinURIScheme + "://"+CoinDefinition.UNITTEST_ADDRESS+"?amount=0.01000000";
-        PivxURI uri = new PivxURI(str);
+        NefURI uri = new NefURI(str);
         assertEquals(CoinDefinition.UNITTEST_ADDRESS, uri.getAddress().toString());
         assertEquals(CENT, uri.getAmount());
     }
 
     @Test(expected = BitcoinURIParseException.class)
     public void testBad_AmountTooPrecise() throws BitcoinURIParseException {
-        new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=0.123456789");
     }
 
     @Test(expected = BitcoinURIParseException.class)
     public void testBad_NegativeAmount() throws BitcoinURIParseException {
-        new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=-1");
     }
 
     @Test(expected = BitcoinURIParseException.class)
     public void testBad_TooLargeAmount() throws BitcoinURIParseException {
-        new PivxURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
+        new NefURI(MAINNET, BITCOIN_SCHEME + ":" + MAINNET_GOOD_ADDRESS
                 + "?amount=100000000");
     }
 
     @Test
     public void testPaymentProtocolReq() throws Exception {
         // Non-backwards compatible form ...
-        PivxURI uri = new PivxURI(TestNet3Params.get(), CoinDefinition.coinURIScheme + ":?r=https%3A%2F%2Fbitcoincore.org%2F%7Egavin%2Ff.php%3Fh%3Db0f02e7cea67f168e25ec9b9f9d584f9");
+        NefURI uri = new NefURI(TestNet3Params.get(), CoinDefinition.coinURIScheme + ":?r=https%3A%2F%2Fbitcoincore.org%2F%7Egavin%2Ff.php%3Fh%3Db0f02e7cea67f168e25ec9b9f9d584f9");
         assertEquals("https://bitcoincore.org/~gavin/f.php?h=b0f02e7cea67f168e25ec9b9f9d584f9", uri.getPaymentRequestUrl());
         assertEquals(ImmutableList.of("https://bitcoincore.org/~gavin/f.php?h=b0f02e7cea67f168e25ec9b9f9d584f9"),
                 uri.getPaymentRequestUrls());
@@ -388,7 +388,7 @@ public class PivxURITest {
 
     @Test
     public void testMultiplePaymentProtocolReq() throws Exception {
-        PivxURI uri = new PivxURI(MAINNET,
+        NefURI uri = new NefURI(MAINNET,
                 "bitcoin:?r=https%3A%2F%2Fbitcoincore.org%2F%7Egavin&r1=bt:112233445566");
         assertEquals(ImmutableList.of("bt:112233445566", "https://bitcoincore.org/~gavin"), uri.getPaymentRequestUrls());
         assertEquals("https://bitcoincore.org/~gavin", uri.getPaymentRequestUrl());
@@ -396,7 +396,7 @@ public class PivxURITest {
 
     @Test
     public void testNoPaymentProtocolReq() throws Exception {
-        PivxURI uri = new PivxURI(MAINNET, "bitcoin:" + MAINNET_GOOD_ADDRESS);
+        NefURI uri = new NefURI(MAINNET, "bitcoin:" + MAINNET_GOOD_ADDRESS);
         assertNull(uri.getPaymentRequestUrl());
         assertEquals(ImmutableList.of(), uri.getPaymentRequestUrls());
         assertNotNull(uri.getAddress());
@@ -404,7 +404,7 @@ public class PivxURITest {
 
     @Test
     public void testUnescapedPaymentProtocolReq() throws Exception {
-        PivxURI uri = new PivxURI(TestNet3Params.get(),
+        NefURI uri = new NefURI(TestNet3Params.get(),
                 "bitcoin:?r=https://merchant.com/pay.php?h%3D2a8628fc2fbe");
         assertEquals("https://merchant.com/pay.php?h=2a8628fc2fbe", uri.getPaymentRequestUrl());
         assertEquals(ImmutableList.of("https://merchant.com/pay.php?h=2a8628fc2fbe"), uri.getPaymentRequestUrls());

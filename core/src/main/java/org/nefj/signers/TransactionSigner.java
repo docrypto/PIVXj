@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.signers;
+package org.nefj.signers;
 
-import org.pivxj.core.Transaction;
-import org.pivxj.crypto.ChildNumber;
-import org.pivxj.script.Script;
-import org.pivxj.wallet.KeyBag;
+import org.nefj.core.Transaction;
+import org.nefj.crypto.ChildNumber;
+import org.nefj.script.Script;
+import org.nefj.wallet.KeyBag;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +29,7 @@ import java.util.Map;
  * <p>Implementations of this interface are intended to sign inputs of the given transaction. Given transaction may already
  * be partially signed or somehow altered by other signers.</p>
  * <p>To make use of the signer, you need to add it into the  wallet by
- * calling {@link org.pivxj.wallet.Wallet#addTransactionSigner(TransactionSigner)}. Signer will be serialized
+ * calling {@link org.nefj.wallet.Wallet#addTransactionSigner(TransactionSigner)}. Signer will be serialized
  * along with the wallet data. In order for a wallet to recreate signer after deserialization, each signer
  * should have no-args constructor</p>
  */

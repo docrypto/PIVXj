@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.InsufficientMoneyException;
-import org.pivxj.core.Sha256Hash;
-import org.pivxj.core.Utils;
-import org.pivxj.net.NioClient;
-import org.pivxj.net.ProtobufConnection;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.Coin;
+import org.nefj.core.ECKey;
+import org.nefj.core.InsufficientMoneyException;
+import org.nefj.core.Sha256Hash;
+import org.nefj.core.Utils;
+import org.nefj.net.NioClient;
+import org.nefj.net.ProtobufConnection;
+import org.nefj.wallet.Wallet;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
@@ -49,7 +49,7 @@ public class PaymentChannelClientConnection {
     /**
      * Attempts to open a new connection to and open a payment channel with the given host and port, blocking until the
      * connection is open. The server is requested to keep the channel open for
-     * {@link org.pivxj.protocols.channels.PaymentChannelClient#DEFAULT_TIME_WINDOW}
+     * {@link org.nefj.protocols.channels.PaymentChannelClient#DEFAULT_TIME_WINDOW}
      * seconds. If the server proposes a longer time the channel will be closed.
      *
      * @param server         The host/port pair where the server is listening.
@@ -75,7 +75,7 @@ public class PaymentChannelClientConnection {
     /**
      * Attempts to open a new connection to and open a payment channel with the given host and port, blocking until the
      * connection is open. The server is requested to keep the channel open for
-     * {@link org.pivxj.protocols.channels.PaymentChannelClient#DEFAULT_TIME_WINDOW}
+     * {@link org.nefj.protocols.channels.PaymentChannelClient#DEFAULT_TIME_WINDOW}
      * seconds. If the server proposes a longer time the channel will be closed.
      *
      * @param server          The host/port pair where the server is listening.

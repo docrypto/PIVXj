@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
-import org.pivxj.core.ECKey;
-import org.pivxj.core.Transaction;
-import org.pivxj.core.VerificationException;
-import org.pivxj.core.Transaction.SigHash;
+import org.nefj.core.ECKey;
+import org.nefj.core.Transaction;
+import org.nefj.core.VerificationException;
+import org.nefj.core.Transaction.SigHash;
 import com.google.common.base.Preconditions;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.math.BigInteger;
 
 /**
- * A TransactionSignature wraps an {@link org.pivxj.core.ECKey.ECDSASignature} and adds methods for handling
+ * A TransactionSignature wraps an {@link org.nefj.core.ECKey.ECDSASignature} and adds methods for handling
  * the additional SIGHASH mode byte that is used.
  */
 public class TransactionSignature extends ECKey.ECDSASignature {

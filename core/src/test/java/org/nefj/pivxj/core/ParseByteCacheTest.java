@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.wallet.Wallet;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.UnitTestParams;
+import org.nefj.store.BlockStore;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.wallet.Wallet;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -29,10 +29,10 @@ import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.core.Utils.HEX;
-import static org.pivxj.testing.FakeTxBuilder.createFakeBlock;
-import static org.pivxj.testing.FakeTxBuilder.createFakeTx;
+import static org.nefj.core.Coin.*;
+import static org.nefj.core.Utils.HEX;
+import static org.nefj.testing.FakeTxBuilder.createFakeBlock;
+import static org.nefj.testing.FakeTxBuilder.createFakeTx;
 import static org.junit.Assert.*;
 
 public class ParseByteCacheTest {

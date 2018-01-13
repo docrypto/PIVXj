@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -24,24 +24,24 @@ import java.util.EnumSet;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.ScriptException;
-import org.pivxj.core.Transaction;
-import org.pivxj.core.TransactionInput;
-import org.pivxj.core.TransactionOutput;
-import org.pivxj.core.Utils;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.script.ScriptChunk;
-import static org.pivxj.script.ScriptOpCodes.getOpCodeName;
-import org.pivxj.signers.LocalTransactionSigner;
-import org.pivxj.signers.TransactionSigner.ProposedTransaction;
-import org.pivxj.wallet.KeyBag;
-import org.pivxj.wallet.RedeemData;
+import org.nefj.core.Coin;
+import org.nefj.core.ECKey;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.ScriptException;
+import org.nefj.core.Transaction;
+import org.nefj.core.TransactionInput;
+import org.nefj.core.TransactionOutput;
+import org.nefj.core.Utils;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.params.MainNetParams;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.script.ScriptChunk;
+import static org.nefj.script.ScriptOpCodes.getOpCodeName;
+import org.nefj.signers.LocalTransactionSigner;
+import org.nefj.signers.TransactionSigner.ProposedTransaction;
+import org.nefj.wallet.KeyBag;
+import org.nefj.wallet.RedeemData;
 
 /**
  * Test case generator for transactions with low-S and high-S signatures, to

@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.*;
-import org.pivxj.crypto.KeyCrypterException;
-import org.pivxj.kits.WalletAppKit;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.RegTestParams;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.store.FlatDB;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.nefj.core.*;
+import org.nefj.crypto.KeyCrypterException;
+import org.nefj.kits.WalletAppKit;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.RegTestParams;
+import org.nefj.params.TestNet3Params;
+import org.nefj.store.FlatDB;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.listeners.WalletCoinsReceivedEventListener;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
@@ -87,7 +87,7 @@ public class ForwardingService {
         kit.wallet().addCoinsReceivedEventListener(new WalletCoinsReceivedEventListener() {
             @Override
             public void onCoinsReceived(Wallet w, Transaction tx, Coin prevBalance, Coin newBalance) {
-                // Runs in the dedicated "user thread" (see pivxj docs for more info on this).
+                // Runs in the dedicated "user thread" (see nefj docs for more info on this).
                 //
                 // The transaction "tx" can either be pending, or included into a block (we didn't see the broadcast).
                 Coin value = tx.getValueSentToMe(w);

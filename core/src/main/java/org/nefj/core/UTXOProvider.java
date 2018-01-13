@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ import java.util.List;
  * A UTXOProvider encapsulates functionality for returning unspent transaction outputs,
  * for use by the wallet or other code that crafts spends.
  *
- * <p>A {@link org.pivxj.store.FullPrunedBlockStore} is an internal implementation within pivxj.</p>
+ * <p>A {@link org.nefj.store.FullPrunedBlockStore} is an internal implementation within nefj.</p>
  */
 public interface UTXOProvider {
 

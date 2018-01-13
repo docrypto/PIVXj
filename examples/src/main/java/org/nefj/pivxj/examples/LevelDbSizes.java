@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
 import static org.fusesource.leveldbjni.JniDBFactory.*;
 

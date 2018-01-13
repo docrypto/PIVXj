@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.core.listeners;
+package org.nefj.core.listeners;
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 
 /**
  * Called when a new transaction is broadcast over the network.

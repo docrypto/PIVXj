@@ -12,11 +12,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.net;
+package org.nefj.net;
 
 import com.google.common.collect.Lists;
-import org.pivxj.core.BloomFilter;
-import org.pivxj.core.PeerFilterProvider;
+import org.nefj.core.BloomFilter;
+import org.nefj.core.PeerFilterProvider;
 import com.google.common.collect.ImmutableList;
 
 import java.util.LinkedList;
@@ -24,9 +24,9 @@ import java.util.LinkedList;
 // This code is unit tested by the PeerGroup tests.
 
 /**
- * <p>A reusable object that will calculate, given a list of {@link org.pivxj.core.PeerFilterProvider}s, a merged
- * {@link org.pivxj.core.BloomFilter} and earliest key time for all of them.
- * Used by the {@link org.pivxj.core.PeerGroup} class internally.</p>
+ * <p>A reusable object that will calculate, given a list of {@link org.nefj.core.PeerFilterProvider}s, a merged
+ * {@link org.nefj.core.BloomFilter} and earliest key time for all of them.
+ * Used by the {@link org.nefj.core.PeerGroup} class internally.</p>
  *
  * <p>Thread safety: threading here can be complicated. Each filter provider is given a begin event, which may acquire
  * a lock (and is guaranteed to receive an end event). This class is mostly thread unsafe and is meant to be used from a

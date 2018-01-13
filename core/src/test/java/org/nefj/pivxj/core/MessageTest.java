@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.params.UnitTestParams;
+import org.nefj.params.UnitTestParams;
 import org.junit.Test;
 
 public class MessageTest {

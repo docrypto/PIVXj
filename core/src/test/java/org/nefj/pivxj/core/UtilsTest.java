@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import java.math.BigInteger;
 import java.util.Date;

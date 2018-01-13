@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.net.discovery;
+package org.nefj.net.discovery;
 
 import com.google.common.collect.*;
 import com.google.common.util.concurrent.*;
@@ -23,8 +23,8 @@ import com.subgraph.orchid.*;
 import com.subgraph.orchid.circuits.path.*;
 import com.subgraph.orchid.data.*;
 import com.subgraph.orchid.data.exitpolicy.*;
-import org.pivxj.core.*;
-import org.pivxj.utils.*;
+import org.nefj.core.*;
+import org.nefj.utils.*;
 import org.slf4j.*;
 
 import java.net.*;

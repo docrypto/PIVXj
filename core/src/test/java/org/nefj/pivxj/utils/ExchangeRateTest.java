@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
 import static org.junit.Assert.assertEquals;
 
@@ -24,7 +24,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import org.junit.Test;
-import org.pivxj.core.Coin;
+import org.nefj.core.Coin;
 
 public class ExchangeRateTest {
 

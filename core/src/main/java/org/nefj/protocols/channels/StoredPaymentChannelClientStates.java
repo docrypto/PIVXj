@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import org.pivxj.core.*;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletExtension;
+import org.nefj.core.*;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletExtension;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.HashMultimap;

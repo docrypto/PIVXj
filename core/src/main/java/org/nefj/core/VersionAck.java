@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 /**
  * <p>The verack message, sent by a client accepting the version message they

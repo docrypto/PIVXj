@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
 import com.google.common.collect.Lists;
-import org.pivxj.core.BloomFilter;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Utils;
-import org.pivxj.crypto.*;
-import org.pivxj.script.Script;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.listeners.KeyChainEventListener;
+import org.nefj.core.BloomFilter;
+import org.nefj.core.ECKey;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Utils;
+import org.nefj.crypto.*;
+import org.nefj.script.Script;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.listeners.KeyChainEventListener;
 
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.ImmutableList;
@@ -50,10 +50,10 @@ import static com.google.common.collect.Lists.newLinkedList;
 /**
  * <p>A deterministic key chain is a {@link KeyChain} that uses the
  * <a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki">BIP 32 standard</a>, as implemented by
- * {@link org.pivxj.crypto.DeterministicHierarchy}, to derive all the keys in the keychain from a master seed.
+ * {@link org.nefj.crypto.DeterministicHierarchy}, to derive all the keys in the keychain from a master seed.
  * This type of wallet is extremely convenient and flexible. Although backing up full wallet files is always a good
  * idea, to recover money only the root seed needs to be preserved and that is a number small enough that it can be
- * written down on paper or, when represented using a BIP 39 {@link org.pivxj.crypto.MnemonicCode},
+ * written down on paper or, when represented using a BIP 39 {@link org.nefj.crypto.MnemonicCode},
  * dictated over the phone (possibly even memorized).</p>
  *
  * <p>Deterministic key chains have other advantages: parts of the key tree can be selectively revealed to allow
@@ -63,14 +63,14 @@ import static com.google.common.collect.Lists.newLinkedList;
  * A watching wallet is not instantiated using the public part of the master key as you may imagine. Instead, you
  * need to take the account key (first child of the master key) and provide the public part of that to the watching
  * wallet instead. You can do this by calling {@link #getWatchingKey()} and then serializing it with
- * {@link org.pivxj.crypto.DeterministicKey#serializePubB58(org.pivxj.core.NetworkParameters)}. The resulting "xpub..." string encodes
+ * {@link org.nefj.crypto.DeterministicKey#serializePubB58(org.nefj.core.NetworkParameters)}. The resulting "xpub..." string encodes
  * sufficient information about the account key to create a watching chain via
- * {@link org.pivxj.crypto.DeterministicKey#deserializeB58(org.pivxj.crypto.DeterministicKey, String, org.pivxj.core.NetworkParameters)}
+ * {@link org.nefj.crypto.DeterministicKey#deserializeB58(org.nefj.crypto.DeterministicKey, String, org.nefj.core.NetworkParameters)}
  * (with null as the first parameter) and then
- * {@link DeterministicKeyChain#DeterministicKeyChain(org.pivxj.crypto.DeterministicKey,KeyChainType keyChaintype)}.</p>
+ * {@link DeterministicKeyChain#DeterministicKeyChain(org.nefj.crypto.DeterministicKey,KeyChainType keyChaintype)}.</p>
  *
- * <p>This class builds on {@link org.pivxj.crypto.DeterministicHierarchy} and
- * {@link org.pivxj.crypto.DeterministicKey} by adding support for serialization to and from protobufs,
+ * <p>This class builds on {@link org.nefj.crypto.DeterministicHierarchy} and
+ * {@link org.nefj.crypto.DeterministicKey} by adding support for serialization to and from protobufs,
  * and encryption of parts of the key tree. Internally it arranges itself as per the BIP 32 spec, with the seed being
  * used to derive a master key, which is then used to derive an account key, the account key is used to derive two
  * child keys called the <i>internal</i> and <i>external</i> parent keys (for change and handing out addresses respectively)
@@ -121,11 +121,11 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
     //public static final ImmutableList<ChildNumber> BIP44_ACCOUNT_ZERO_PATH =
     //        ImmutableList.of(new ChildNumber(44, true), ChildNumber.ZERO_HARDENED, ChildNumber.ZERO_HARDENED);
 
-    // PIVX BIP44
+    // NEF BIP44
     public static final ChildNumber BIP44_MASTER_KEY = new ChildNumber(44, true);
-    public static final ChildNumber PIVX_PATH = new ChildNumber(119,true);
+    public static final ChildNumber NEF_PATH = new ChildNumber(119,true);
     public static final ImmutableList<ChildNumber> BIP44_ACCOUNT_ZERO_PATH =
-            ImmutableList.of(BIP44_MASTER_KEY, PIVX_PATH, ChildNumber.ZERO_HARDENED);
+            ImmutableList.of(BIP44_MASTER_KEY, NEF_PATH, ChildNumber.ZERO_HARDENED);
 
     // We try to ensure we have at least this many keys ready and waiting to be handed out via getKey().
     // See docs for getLookaheadSize() for more info on what this is for. The -1 value means it hasn't been calculated
@@ -170,7 +170,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
 
     // Key Chain version to support BIP44 fixed without refactor this code too much
     public static enum KeyChainType{
-        BIP32,BIP44_PIVX_ONLY
+        BIP32,BIP44_NEF_ONLY
     }
 
 
@@ -341,7 +341,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
     public DeterministicKeyChain(DeterministicKey watchingKey,KeyChainType keyChainType) {
         this.keyChainType = keyChainType;
         checkArgument(watchingKey.isPubKeyOnly(), "Private subtrees not currently supported: if you got this key from DKC.getWatchingKey() then use .dropPrivate().dropParent() on it first.");
-        if (keyChainType != KeyChainType.BIP44_PIVX_ONLY)
+        if (keyChainType != KeyChainType.BIP44_NEF_ONLY)
             checkArgument( watchingKey.getPath().size() == getAccountPath().size(), "You can only watch an account key currently");
         basicKeyChain = new BasicKeyChain();
         this.seed = null;
@@ -480,7 +480,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
         switch (keyChainType){
             case BIP32:
                 return ACCOUNT_ZERO_PATH;
-            case BIP44_PIVX_ONLY:
+            case BIP44_NEF_ONLY:
                 return BIP44_ACCOUNT_ZERO_PATH;
             default:
                 throw new IllegalStateException("Uknown keyChainType");
@@ -503,7 +503,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
     // Derives the account path keys and inserts them into the basic key chain. This is important to preserve their
     // order for serialization, amongst other things.
     private void initializeHierarchyUnencrypted(DeterministicKey baseKey) {
-        if (baseKey.isPubKeyOnly() && keyChainType == KeyChainType.BIP44_PIVX_ONLY){
+        if (baseKey.isPubKeyOnly() && keyChainType == KeyChainType.BIP44_NEF_ONLY){
             externalParentKey = baseKey;
             internalParentKey = baseKey;
             addToBasicChain(externalParentKey);
@@ -570,7 +570,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
                 ImmutableList<ChildNumber> path = HDUtils.append(parentKey.getPath(), new ChildNumber(index - numberOfKeys + i, false));
                 DeterministicKey k = hierarchy.get(path, false, false);
                 // Just a last minute sanity check before we hand the key out to the app for usage. This isn't inspired
-                // by any real problem reports from pivxj users, but I've heard of cases via the grapevine of
+                // by any real problem reports from nefj users, but I've heard of cases via the grapevine of
                 // places that lost money due to bitflips causing addresses to not match keys. Of course in an
                 // environment with flaky RAM there's no real way to always win: bitflips could be introduced at any
                 // other layer. But as we're potentially retrieving from long term storage here, check anyway.
@@ -698,7 +698,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
      * <p>An alias for <code>getKeyByPath(getAccountPath())</code>.</p>
      *
      * <p>Use this when you would like to create a watching key chain that follows this one, but can't spend money from it.
-     * The returned key can be serialized and then passed into {@link #watch(org.pivxj.crypto.DeterministicKey)}
+     * The returned key can be serialized and then passed into {@link #watch(org.nefj.crypto.DeterministicKey)}
      * on another system to watch the hierarchy.</p>
      *
      * <p>Note that the returned key is not pubkey only unless this key chain already is: the returned key can still
@@ -707,7 +707,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
     public DeterministicKey getWatchingKey() {
         List<ChildNumber> childNumbers = Lists.newArrayList(getAccountPath());
         // first account only
-        if (keyChainType == KeyChainType.BIP44_PIVX_ONLY){
+        if (keyChainType == KeyChainType.BIP44_NEF_ONLY){
             childNumbers.add(ChildNumber.ZERO);
         }
         return getKeyByPath(childNumbers,true);
@@ -873,7 +873,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
                 path.add(new ChildNumber(i));
             if (!path.isEmpty() && path.get(0).equals(BIP44_MASTER_KEY)){
                 // is BIP44
-                keyChainType = KeyChainType.BIP44_PIVX_ONLY;
+                keyChainType = KeyChainType.BIP44_NEF_ONLY;
                 break;
             }
         }
@@ -1395,7 +1395,7 @@ public class DeterministicKeyChain implements EncryptableKeyChain {
     /**
      * Whether the keychain is married.  A keychain is married when it vends P2SH addresses
      * from multiple keychains in a multisig relationship.
-     * @see org.pivxj.wallet.MarriedKeyChain
+     * @see org.nefj.wallet.MarriedKeyChain
      */
     public boolean isMarried() {
         return false;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import org.pivxj.core.Utils;
+import org.nefj.core.Utils;
 
 import org.junit.Before;
 import org.junit.Test;

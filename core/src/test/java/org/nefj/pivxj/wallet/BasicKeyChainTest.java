@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.BloomFilter;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.Utils;
-import org.pivxj.crypto.KeyCrypter;
-import org.pivxj.crypto.KeyCrypterException;
-import org.pivxj.crypto.KeyCrypterScrypt;
-import org.pivxj.utils.Threading;
+import org.nefj.core.BloomFilter;
+import org.nefj.core.ECKey;
+import org.nefj.core.Utils;
+import org.nefj.crypto.KeyCrypter;
+import org.nefj.crypto.KeyCrypterException;
+import org.nefj.crypto.KeyCrypterScrypt;
+import org.nefj.utils.Threading;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
-import org.pivxj.wallet.listeners.AbstractKeyChainEventListener;
+import org.nefj.wallet.listeners.AbstractKeyChainEventListener;
 import org.junit.Before;
 import org.junit.Test;
 

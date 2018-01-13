@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.Monetary;
+import org.nefj.core.Coin;
+import org.nefj.core.Monetary;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormatSymbols;
@@ -52,11 +52,11 @@ public final class MonetaryFormat {
     /** Standard format for fiat amounts. */
     public static final MonetaryFormat FIAT = new MonetaryFormat().shift(0).minDecimals(2).repeatOptionalDecimals(2, 1);
     /** Currency code for base 1 Bitcoin. */
-    public static final String CODE_BTC = "PIV";
+    public static final String CODE_BTC = "NEF";
     /** Currency code for base 1/1000 Bitcoin. */
-    public static final String CODE_MBTC = "mPIV";
+    public static final String CODE_MBTC = "mNEF";
     /** Currency code for base 1/1000000 Bitcoin. */
-    public static final String CODE_UBTC = "µPIV";
+    public static final String CODE_UBTC = "µNEF";
 
     public static final int MAX_DECIMALS = 8;
 
@@ -391,7 +391,7 @@ public final class MonetaryFormat {
     }
 
     /**
-     * Parse a human readable coin value to a {@link org.pivxj.core.Coin} instance.
+     * Parse a human readable coin value to a {@link org.nefj.core.Coin} instance.
      * 
      * @throws NumberFormatException
      *             if the string cannot be parsed for some reason
@@ -401,7 +401,7 @@ public final class MonetaryFormat {
     }
 
     /**
-     * Parse a human readable fiat value to a {@link org.pivxj.utils.Fiat} instance.
+     * Parse a human readable fiat value to a {@link org.nefj.utils.Fiat} instance.
      * 
      * @throws NumberFormatException
      *             if the string cannot be parsed for some reason

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;

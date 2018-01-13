@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
@@ -25,8 +25,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import org.junit.Test;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet3Params;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet3Params;
 
 public class DumpedPrivateKeyTest {
 

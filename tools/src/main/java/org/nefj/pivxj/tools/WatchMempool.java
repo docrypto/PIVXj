@@ -15,22 +15,22 @@
  * limitations under the License.
  */
 
-package org.pivxj.tools;
+package org.nefj.tools;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import com.google.common.collect.ImmutableList;
-import org.pivxj.core.listeners.*;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Peer;
-import org.pivxj.core.PeerGroup;
-import org.pivxj.core.Transaction;
-import org.pivxj.net.discovery.DnsDiscovery;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.DefaultRiskAnalysis;
-import org.pivxj.wallet.RiskAnalysis.Result;
+import org.nefj.core.listeners.*;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Peer;
+import org.nefj.core.PeerGroup;
+import org.nefj.core.Transaction;
+import org.nefj.net.discovery.DnsDiscovery;
+import org.nefj.params.MainNetParams;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.DefaultRiskAnalysis;
+import org.nefj.wallet.RiskAnalysis.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

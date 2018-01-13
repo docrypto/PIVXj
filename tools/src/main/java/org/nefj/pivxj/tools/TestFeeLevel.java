@@ -12,16 +12,16 @@
  * limitations under the License.
  */
 
-package org.pivxj.tools;
+package org.nefj.tools;
 
-import org.pivxj.core.*;
-import org.pivxj.core.listeners.PeerConnectedEventListener;
-import org.pivxj.core.listeners.PeerDisconnectedEventListener;
-import org.pivxj.kits.WalletAppKit;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.SendRequest;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.*;
+import org.nefj.core.listeners.PeerConnectedEventListener;
+import org.nefj.core.listeners.PeerDisconnectedEventListener;
+import org.nefj.kits.WalletAppKit;
+import org.nefj.params.MainNetParams;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.SendRequest;
+import org.nefj.wallet.Wallet;
 
 import java.io.File;
 

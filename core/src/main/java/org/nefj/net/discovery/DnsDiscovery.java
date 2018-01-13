@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.net.discovery;
+package org.nefj.net.discovery;
 
-import org.pivxj.core.*;
-import org.pivxj.utils.*;
+import org.nefj.core.*;
+import org.nefj.utils.*;
 
 import java.net.*;
 import java.util.*;

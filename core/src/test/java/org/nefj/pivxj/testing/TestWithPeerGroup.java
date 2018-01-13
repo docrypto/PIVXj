@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.testing;
+package org.nefj.testing;
 
 import com.google.common.base.*;
 import com.google.common.util.concurrent.*;
-import org.pivxj.core.*;
-import org.pivxj.net.*;
-import org.pivxj.store.*;
-import org.pivxj.utils.*;
+import org.nefj.core.*;
+import org.nefj.net.*;
+import org.nefj.store.*;
+import org.nefj.utils.*;
 
 import java.net.*;
 import java.util.concurrent.*;

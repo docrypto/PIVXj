@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 /**
  * This exception is used by the TransactionBroadcast class to indicate that a broadcast

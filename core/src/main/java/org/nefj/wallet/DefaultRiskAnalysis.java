@@ -15,18 +15,18 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.ECKey.ECDSASignature;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Transaction;
-import org.pivxj.core.TransactionConfidence;
-import org.pivxj.core.TransactionInput;
-import org.pivxj.core.TransactionOutput;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.script.ScriptChunk;
+import org.nefj.core.Coin;
+import org.nefj.core.ECKey;
+import org.nefj.core.ECKey.ECDSASignature;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Transaction;
+import org.nefj.core.TransactionConfidence;
+import org.nefj.core.TransactionInput;
+import org.nefj.core.TransactionOutput;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.script.ScriptChunk;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -114,7 +114,7 @@ public class DefaultRiskAnalysis implements RiskAnalysis {
 
     /**
      * The reason a transaction is considered non-standard, returned by
-     * {@link #isStandard(org.pivxj.core.Transaction)}.
+     * {@link #isStandard(org.nefj.core.Transaction)}.
      */
     public enum RuleViolation {
         NONE,

@@ -15,19 +15,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.params;
+package org.nefj.params;
 
-import org.pivxj.core.CoinDefinition;
+import org.nefj.core.CoinDefinition;
 
 import java.math.BigInteger;
 import java.util.Date;
 
-import org.pivxj.core.Block;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.StoredBlock;
-import org.pivxj.core.VerificationException;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
+import org.nefj.core.Block;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.StoredBlock;
+import org.nefj.core.VerificationException;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
 
 import static com.google.common.base.Preconditions.checkState;
 

@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
 /**
  * Indicates that an attempt was made to use HD wallet features on a wallet that was deserialized from an old,

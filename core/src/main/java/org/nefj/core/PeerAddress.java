@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.params.MainNetParams;
+import org.nefj.params.MainNetParams;
 import com.google.common.base.Objects;
 import com.google.common.net.InetAddresses;
 
@@ -28,8 +28,8 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-import static org.pivxj.core.Utils.uint32ToByteStreamLE;
-import static org.pivxj.core.Utils.uint64ToByteStreamLE;
+import static org.nefj.core.Utils.uint32ToByteStreamLE;
+import static org.nefj.core.Utils.uint64ToByteStreamLE;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**

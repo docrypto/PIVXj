@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.net;
+package org.nefj.net;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.Service;

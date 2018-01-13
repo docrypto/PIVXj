@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.jni;
+package org.nefj.jni;
 
 import com.google.common.util.concurrent.FutureCallback;
 

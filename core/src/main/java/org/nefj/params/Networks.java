@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.params;
+package org.nefj.params;
 
-import org.pivxj.core.NetworkParameters;
+import org.nefj.core.NetworkParameters;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 

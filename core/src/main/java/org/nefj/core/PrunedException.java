@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 // TODO: Rename PrunedException to something like RequiredDataWasPrunedException
 

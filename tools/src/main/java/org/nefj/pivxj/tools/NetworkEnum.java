@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.tools;
+package org.nefj.tools;
 
 public enum NetworkEnum {
     MAIN,

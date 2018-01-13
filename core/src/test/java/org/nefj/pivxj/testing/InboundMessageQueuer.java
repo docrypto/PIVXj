@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.testing;
+package org.nefj.testing;
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 import com.google.common.util.concurrent.SettableFuture;
 
 import java.net.InetSocketAddress;
@@ -24,7 +24,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * An extension of {@link org.pivxj.core.PeerSocketHandler} that keeps inbound messages in a queue for later processing
+ * An extension of {@link org.nefj.core.PeerSocketHandler} that keeps inbound messages in a queue for later processing
  */
 public abstract class InboundMessageQueuer extends PeerSocketHandler {
     public final BlockingQueue<Message> inboundMessages = new ArrayBlockingQueue<Message>(1000);

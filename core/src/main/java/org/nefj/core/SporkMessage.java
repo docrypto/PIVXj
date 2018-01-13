@@ -1,4 +1,4 @@
-package org.pivxj.core;
+package org.nefj.core;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

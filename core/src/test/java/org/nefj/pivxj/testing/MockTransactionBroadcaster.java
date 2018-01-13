@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.testing;
+package org.nefj.testing;
 
-import org.pivxj.core.*;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.*;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

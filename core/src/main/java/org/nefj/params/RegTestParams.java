@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.params;
+package org.nefj.params;
 
-import org.pivxj.core.Block;
+import org.nefj.core.Block;
 
 import java.math.BigInteger;
 

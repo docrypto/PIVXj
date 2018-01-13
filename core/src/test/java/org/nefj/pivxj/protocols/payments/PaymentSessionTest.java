@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.payments;
+package org.nefj.protocols.payments;
 
-import org.pivxj.core.*;
-import org.pivxj.crypto.TrustStoreLoader;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet3Params;
+import org.nefj.core.*;
+import org.nefj.crypto.TrustStoreLoader;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet3Params;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
 import org.bitcoin.protocols.payments.Protos;
@@ -32,7 +32,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static org.pivxj.core.Coin.COIN;
+import static org.nefj.core.Coin.COIN;
 import static org.junit.Assert.*;
 
 public class PaymentSessionTest {

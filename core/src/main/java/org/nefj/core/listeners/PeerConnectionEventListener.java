@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.core.listeners;
+package org.nefj.core.listeners;
 
-import org.pivxj.core.Peer;
+import org.nefj.core.Peer;
 
 /**
  * <p>Implementors can listen to events like peer discovery, connect or disconnects.</p>

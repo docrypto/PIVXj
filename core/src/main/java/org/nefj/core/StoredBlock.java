@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
 import com.google.common.base.Objects;
 
 import java.math.BigInteger;

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.core.*;
-import org.pivxj.testing.TestWithWallet;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletExtension;
-import org.pivxj.wallet.WalletFiles;
-import org.pivxj.wallet.WalletProtobufSerializer;
+import org.nefj.core.*;
+import org.nefj.testing.TestWithWallet;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletExtension;
+import org.nefj.wallet.WalletFiles;
+import org.nefj.wallet.WalletProtobufSerializer;
 
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -47,9 +47,9 @@ import java.util.Collection;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.protocols.channels.PaymentChannelCloseException.CloseReason;
-import static org.pivxj.testing.FakeTxBuilder.createFakeBlock;
+import static org.nefj.core.Coin.*;
+import static org.nefj.protocols.channels.PaymentChannelCloseException.CloseReason;
+import static org.nefj.testing.FakeTxBuilder.createFakeBlock;
 import static org.bitcoin.paymentchannel.Protos.TwoWayChannelMessage.MessageType;
 import static org.junit.Assert.*;
 
@@ -560,7 +560,7 @@ public class ChannelConnectionTest extends TestWithWallet {
     private static Wallet roundTripClientWallet(Wallet wallet) throws Exception {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         new WalletProtobufSerializer().writeWallet(wallet, bos);
-        org.pivxj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
+        org.nefj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
         StoredPaymentChannelClientStates state = new StoredPaymentChannelClientStates(null, failBroadcaster);
         return new WalletProtobufSerializer().readWallet(wallet.getParams(), new WalletExtension[] { state }, proto);
     }
@@ -569,7 +569,7 @@ public class ChannelConnectionTest extends TestWithWallet {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         new WalletProtobufSerializer().writeWallet(wallet, bos);
         StoredPaymentChannelServerStates state = new StoredPaymentChannelServerStates(null, failBroadcaster);
-        org.pivxj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
+        org.nefj.wallet.Protos.Wallet proto = WalletProtobufSerializer.parseToProto(new ByteArrayInputStream(bos.toByteArray()));
         return new WalletProtobufSerializer().readWallet(wallet.getParams(), new WalletExtension[] { state }, proto);
     }
 

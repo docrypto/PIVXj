@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import static org.pivxj.core.Coin.SMALLEST_UNIT_EXPONENT;
+import static org.nefj.core.Coin.SMALLEST_UNIT_EXPONENT;
 import static com.google.common.base.Preconditions.checkArgument;
 import com.google.common.base.Objects;
 import java.math.BigInteger;
@@ -42,7 +42,7 @@ import java.util.List;
  * @see          java.text.Format
  * @see          java.text.NumberFormat
  * @see          java.text.DecimalFormat
- * @see          org.pivxj.core.Coin
+ * @see          org.nefj.core.Coin
  */
 
 public final class BtcFixedFormat extends BtcFormat {

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.net;
+package org.nefj.net;
 
 import com.google.common.base.Throwables;
 import com.google.common.util.concurrent.*;
-import org.pivxj.utils.*;
+import org.nefj.utils.*;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;

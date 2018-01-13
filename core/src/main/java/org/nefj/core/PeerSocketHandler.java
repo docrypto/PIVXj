@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.net.AbstractTimeoutHandler;
-import org.pivxj.net.MessageWriteTarget;
-import org.pivxj.net.StreamConnection;
-import org.pivxj.utils.Threading;
+import org.nefj.net.AbstractTimeoutHandler;
+import org.nefj.net.MessageWriteTarget;
+import org.nefj.net.StreamConnection;
+import org.nefj.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,7 +37,7 @@ import static com.google.common.base.Preconditions.*;
 
 /**
  * Handles high-level message (de)serialization for peers, acting as the bridge between the
- * {@link org.pivxj.net} classes and {@link Peer}.
+ * {@link org.nefj.net} classes and {@link Peer}.
  */
 public abstract class PeerSocketHandler extends AbstractTimeoutHandler implements StreamConnection {
     private static final Logger log = LoggerFactory.getLogger(PeerSocketHandler.class);
@@ -210,8 +210,8 @@ public abstract class PeerSocketHandler extends AbstractTimeoutHandler implement
 
     /**
      * Sets the {@link MessageWriteTarget} used to write messages to the peer. This should almost never be called, it is
-     * called automatically by {@link org.pivxj.net.NioClient} or
-     * {@link org.pivxj.net.NioClientManager} once the socket finishes initialization.
+     * called automatically by {@link org.nefj.net.NioClient} or
+     * {@link org.nefj.net.NioClientManager} once the socket finishes initialization.
      */
     @Override
     public void setWriteTarget(MessageWriteTarget writeTarget) {

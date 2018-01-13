@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.pivxj.signers;
+package org.nefj.signers;
 
-import org.pivxj.core.ECKey;
-import org.pivxj.core.TransactionInput;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptChunk;
-import org.pivxj.wallet.KeyBag;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.ECKey;
+import org.nefj.core.TransactionInput;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptChunk;
+import org.nefj.wallet.KeyBag;
+import org.nefj.wallet.Wallet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * This transaction signer resolves missing signatures in accordance with the given {@link org.pivxj.wallet.Wallet.MissingSigsMode}.
+ * This transaction signer resolves missing signatures in accordance with the given {@link org.nefj.wallet.Wallet.MissingSigsMode}.
  * If missingSigsMode is USE_OP_ZERO this signer does nothing assuming missing signatures are already presented in
  * scriptSigs as OP_0.
  * In MissingSigsMode.THROW mode this signer will throw an exception. It would be MissingSignatureException

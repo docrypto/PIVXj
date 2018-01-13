@@ -12,11 +12,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.jni;
+package org.nefj.jni;
 
-import org.pivxj.core.*;
-import org.pivxj.protocols.channels.PaymentChannelCloseException;
-import org.pivxj.protocols.channels.ServerConnectionEventHandler;
+import org.nefj.core.*;
+import org.nefj.protocols.channels.PaymentChannelCloseException;
+import org.nefj.protocols.channels.ServerConnectionEventHandler;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
 

@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.pivxj.testing;
+package org.nefj.testing;
 
-import org.pivxj.core.*;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
+import org.nefj.core.*;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Random;
 
-import static org.pivxj.core.Coin.*;
+import static org.nefj.core.Coin.*;
 import static com.google.common.base.Preconditions.checkState;
 
 public class FakeTxBuilder {

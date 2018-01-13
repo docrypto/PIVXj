@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.listeners.PeerConnectedEventListener;
-import org.pivxj.core.listeners.PeerDisconnectedEventListener;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Peer;
-import org.pivxj.core.PeerAddress;
-import org.pivxj.core.VersionMessage;
-import org.pivxj.net.discovery.DnsDiscovery;
-import org.pivxj.net.discovery.PeerDiscoveryException;
-import org.pivxj.net.NioClientManager;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.utils.BriefLogFormatter;
+import org.nefj.core.listeners.PeerConnectedEventListener;
+import org.nefj.core.listeners.PeerDisconnectedEventListener;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Peer;
+import org.nefj.core.PeerAddress;
+import org.nefj.core.VersionMessage;
+import org.nefj.net.discovery.DnsDiscovery;
+import org.nefj.net.discovery.PeerDiscoveryException;
+import org.nefj.net.NioClientManager;
+import org.nefj.params.MainNetParams;
+import org.nefj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;

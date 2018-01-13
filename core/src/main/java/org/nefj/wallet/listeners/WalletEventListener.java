@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet.listeners;
+package org.nefj.wallet.listeners;
 
-import org.pivxj.core.listeners.TransactionConfidenceEventListener;
+import org.nefj.core.listeners.TransactionConfidenceEventListener;
 
 /**
  * <p>Common interface for wallet changes and transactions.</p>

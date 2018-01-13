@@ -14,9 +14,9 @@
 
 package wallettemplate.controls;
 
-import org.pivxj.core.Address;
-import org.pivxj.core.AddressFormatException;
-import org.pivxj.core.NetworkParameters;
+import org.nefj.core.Address;
+import org.nefj.core.AddressFormatException;
+import org.nefj.core.NetworkParameters;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import wallettemplate.utils.TextFieldValidator;

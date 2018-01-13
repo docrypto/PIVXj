@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.crypto.*;
+import org.nefj.crypto.*;
 
 /**
  * Default factory for creating keychains while de-serializing.

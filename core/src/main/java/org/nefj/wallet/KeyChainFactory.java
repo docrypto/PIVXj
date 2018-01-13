@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.crypto.DeterministicKey;
-import org.pivxj.crypto.KeyCrypter;
+import org.nefj.crypto.DeterministicKey;
+import org.nefj.crypto.KeyCrypter;
 
 /**
  * Factory interface for creation keychains while de-serializing a wallet.

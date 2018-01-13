@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.base.*;
 import com.google.common.collect.*;
 import com.google.common.util.concurrent.*;
-import org.pivxj.core.listeners.*;
-import org.pivxj.net.*;
-import org.pivxj.params.*;
-import org.pivxj.store.*;
-import org.pivxj.utils.*;
+import org.nefj.core.listeners.*;
+import org.nefj.net.*;
+import org.nefj.params.*;
+import org.nefj.store.*;
+import org.nefj.utils.*;
 import org.slf4j.*;
 
 import java.io.*;
@@ -302,7 +302,7 @@ public class BitcoindComparisonTool {
                 bitcoind.ping().get();
                 if (!chain.getChainHead().getHeader().getHash().equals(bitcoindChainHead)) {
                     rulesSinceFirstFail++;
-                    log.error("ERROR: bitcoind and pivxj acceptance differs on block \"" + block.ruleName + "\"");
+                    log.error("ERROR: bitcoind and nefj acceptance differs on block \"" + block.ruleName + "\"");
                 }
                 if (block.sendOnce)
                     preloadedBlocks.remove(nextBlock.getHash());

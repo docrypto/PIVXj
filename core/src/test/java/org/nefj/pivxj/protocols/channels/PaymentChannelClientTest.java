@@ -12,11 +12,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.core.*;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletExtension;
+import org.nefj.core.*;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletExtension;
 import org.bitcoin.paymentchannel.Protos;
 import org.easymock.Capture;
 import org.easymock.EasyMock;

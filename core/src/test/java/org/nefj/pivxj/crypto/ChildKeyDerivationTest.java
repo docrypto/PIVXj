@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
-import org.pivxj.core.*;
-import org.pivxj.params.*;
-import org.pivxj.wallet.DeterministicKeyChain;
+import org.nefj.core.*;
+import org.nefj.params.*;
+import org.nefj.wallet.DeterministicKeyChain;
 import org.junit.*;
 import org.spongycastle.crypto.params.*;
 
-import static org.pivxj.core.Utils.*;
+import static org.nefj.core.Utils.*;
 import static org.junit.Assert.*;
 
 /**

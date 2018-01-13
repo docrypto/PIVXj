@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.signers;
+package org.nefj.signers;
 
 /**
  * A signer that doesn't have any state to be serialized.

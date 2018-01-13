@@ -15,51 +15,51 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.listeners.TransactionConfidenceEventListener;
-import org.pivxj.core.AbstractBlockChain;
-import org.pivxj.core.Address;
-import org.pivxj.core.Block;
-import org.pivxj.core.BlockChain;
-import org.pivxj.core.Coin;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.InsufficientMoneyException;
-import org.pivxj.core.PeerAddress;
-import org.pivxj.core.Sha256Hash;
-import org.pivxj.core.StoredBlock;
-import org.pivxj.core.Transaction;
-import org.pivxj.core.TransactionConfidence;
-import org.pivxj.core.TransactionInput;
-import org.pivxj.core.TransactionOutPoint;
-import org.pivxj.core.TransactionOutput;
-import org.pivxj.core.Utils;
-import org.pivxj.core.VerificationException;
-import org.pivxj.core.TransactionConfidence.ConfidenceType;
-import org.pivxj.crypto.*;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.signers.StatelessTransactionSigner;
-import org.pivxj.signers.TransactionSigner;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.testing.*;
-import org.pivxj.utils.ExchangeRate;
-import org.pivxj.utils.Fiat;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet.BalanceType;
-import org.pivxj.wallet.WalletTransaction.Pool;
-import org.pivxj.wallet.listeners.KeyChainEventListener;
-import org.pivxj.wallet.listeners.WalletChangeEventListener;
-import org.pivxj.wallet.listeners.WalletCoinsReceivedEventListener;
-import org.pivxj.wallet.listeners.WalletCoinsSentEventListener;
+import org.nefj.core.listeners.TransactionConfidenceEventListener;
+import org.nefj.core.AbstractBlockChain;
+import org.nefj.core.Address;
+import org.nefj.core.Block;
+import org.nefj.core.BlockChain;
+import org.nefj.core.Coin;
+import org.nefj.core.ECKey;
+import org.nefj.core.InsufficientMoneyException;
+import org.nefj.core.PeerAddress;
+import org.nefj.core.Sha256Hash;
+import org.nefj.core.StoredBlock;
+import org.nefj.core.Transaction;
+import org.nefj.core.TransactionConfidence;
+import org.nefj.core.TransactionInput;
+import org.nefj.core.TransactionOutPoint;
+import org.nefj.core.TransactionOutput;
+import org.nefj.core.Utils;
+import org.nefj.core.VerificationException;
+import org.nefj.core.TransactionConfidence.ConfidenceType;
+import org.nefj.crypto.*;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.signers.StatelessTransactionSigner;
+import org.nefj.signers.TransactionSigner;
+import org.nefj.store.BlockStoreException;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.testing.*;
+import org.nefj.utils.ExchangeRate;
+import org.nefj.utils.Fiat;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet.BalanceType;
+import org.nefj.wallet.WalletTransaction.Pool;
+import org.nefj.wallet.listeners.KeyChainEventListener;
+import org.nefj.wallet.listeners.WalletChangeEventListener;
+import org.nefj.wallet.listeners.WalletCoinsReceivedEventListener;
+import org.nefj.wallet.listeners.WalletCoinsSentEventListener;
 import org.easymock.EasyMock;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
-import org.pivxj.wallet.Protos.Wallet.EncryptionType;
+import org.nefj.wallet.Protos.Wallet.EncryptionType;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -79,9 +79,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.core.Utils.HEX;
-import static org.pivxj.testing.FakeTxBuilder.*;
+import static org.nefj.core.Coin.*;
+import static org.nefj.core.Utils.HEX;
+import static org.nefj.testing.FakeTxBuilder.*;
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.replay;
 import static com.google.common.base.Preconditions.checkNotNull;
@@ -807,7 +807,7 @@ public class WalletTest extends TestWithWallet {
         Transaction send1 = checkNotNull(wallet.createSend(OTHER_ADDRESS, value2));
         Transaction send2 = checkNotNull(wallet.createSend(OTHER_ADDRESS, value2));
         byte[] buf = send1.bitcoinSerialize();
-        buf[43] = 0;  // Break the signature: pivxj won't check in SPV mode and this is easier than other mutations.
+        buf[43] = 0;  // Break the signature: nefj won't check in SPV mode and this is easier than other mutations.
         send1 = PARAMS.getDefaultSerializer().makeTransaction(buf);
         wallet.commitTx(send2);
         wallet.allowSpendingUnconfirmedTransactions();
@@ -1779,7 +1779,7 @@ public class WalletTest extends TestWithWallet {
     @Test
     public void autosaveImmediate() throws Exception {
         // Test that the wallet will save itself automatically when it changes.
-        File f = File.createTempFile("pivxj-unit-test", null);
+        File f = File.createTempFile("nefj-unit-test", null);
         Sha256Hash hash1 = Sha256Hash.of(f);
         // Start with zero delay and ensure the wallet file changes after adding a key.
         wallet.autosaveToFile(f, 0, TimeUnit.SECONDS, null);
@@ -1801,7 +1801,7 @@ public class WalletTest extends TestWithWallet {
         // an auto-save cycle of 1 second.
         final File[] results = new File[2];
         final CountDownLatch latch = new CountDownLatch(3);
-        File f = File.createTempFile("pivxj-unit-test", null);
+        File f = File.createTempFile("nefj-unit-test", null);
         Sha256Hash hash1 = Sha256Hash.of(f);
         wallet.autosaveToFile(f, 1, TimeUnit.SECONDS,
                 new WalletFiles.Listener() {

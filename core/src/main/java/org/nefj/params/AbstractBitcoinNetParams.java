@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.params;
+package org.nefj.params;
 
 import java.math.BigInteger;
 import java.util.concurrent.TimeUnit;
 
-import org.pivxj.core.*;
-import org.pivxj.utils.MonetaryFormat;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
+import org.nefj.core.*;
+import org.nefj.utils.MonetaryFormat;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

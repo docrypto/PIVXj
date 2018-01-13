@@ -1,10 +1,10 @@
-package org.pivxj.kits;
+package org.nefj.kits;
 
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.store.LevelDBBlockStore;
-import org.pivxj.store.SPVBlockStore;
+import org.nefj.core.NetworkParameters;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
+import org.nefj.store.LevelDBBlockStore;
+import org.nefj.store.SPVBlockStore;
 
 import java.io.File;
 

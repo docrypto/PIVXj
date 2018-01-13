@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.signers;
+package org.nefj.signers;
 
-import org.pivxj.core.*;
-import org.pivxj.crypto.ChildNumber;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.script.Script;
-import org.pivxj.wallet.KeyBag;
-import org.pivxj.wallet.RedeemData;
+import org.nefj.core.*;
+import org.nefj.crypto.ChildNumber;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.script.Script;
+import org.nefj.wallet.KeyBag;
+import org.nefj.wallet.RedeemData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +32,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 /**
  * <p>This signer may be used as a template for creating custom multisig transaction signers.</p>
  * <p>
- * Concrete implementations have to implement {@link #getSignature(org.pivxj.core.Sha256Hash, java.util.List)}
+ * Concrete implementations have to implement {@link #getSignature(org.nefj.core.Sha256Hash, java.util.List)}
  * method returning a signature and a public key of the keypair used to created that signature.
  * It's up to custom implementation where to locate signatures: it may be a network connection,
  * some local API or something else.

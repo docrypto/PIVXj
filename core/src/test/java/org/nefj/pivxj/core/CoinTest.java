@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import static org.pivxj.core.Coin.*;
-import static org.pivxj.core.NetworkParameters.MAX_MONEY;
+import static org.nefj.core.Coin.*;
+import static org.nefj.core.NetworkParameters.MAX_MONEY;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.jni;
+package org.nefj.jni;
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 
 import java.util.List;
-import org.pivxj.core.listeners.NewBestBlockListener;
-import org.pivxj.core.listeners.ReorganizeListener;
-import org.pivxj.core.listeners.TransactionReceivedInBlockListener;
+import org.nefj.core.listeners.NewBestBlockListener;
+import org.nefj.core.listeners.ReorganizeListener;
+import org.nefj.core.listeners.TransactionReceivedInBlockListener;
 
 /**
  * An event listener that relays events to a native C++ object. A pointer to that object is stored in

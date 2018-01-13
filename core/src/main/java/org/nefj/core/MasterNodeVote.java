@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.script.Script;
+import org.nefj.script.Script;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Serializable;
 
-import static org.pivxj.core.Utils.int64ToByteStreamLE;
-import static org.pivxj.core.Utils.uint32ToByteStreamLE;
+import static org.nefj.core.Utils.int64ToByteStreamLE;
+import static org.nefj.core.Utils.uint32ToByteStreamLE;
 
 public class MasterNodeVote  extends ChildMessage implements Serializable {
     public int votes;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.params;
+package org.nefj.params;
 
-import org.pivxj.core.CoinDefinition;
+import org.nefj.core.CoinDefinition;
 
 
 import static com.google.common.base.Preconditions.checkState;

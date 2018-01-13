@@ -1,6 +1,6 @@
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.utils.Threading;
+import org.nefj.utils.Threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.locks.ReentrantLock;
 
-import static org.pivxj.core.MasterNodeSystem.MASTERNODE_REMOVAL_SECONDS;
+import static org.nefj.core.MasterNodeSystem.MASTERNODE_REMOVAL_SECONDS;
 
 /**
  * Created by Eric on 2/8/2015.

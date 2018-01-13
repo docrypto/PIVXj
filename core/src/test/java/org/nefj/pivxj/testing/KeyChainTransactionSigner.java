@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.testing;
+package org.nefj.testing;
 
-import org.pivxj.core.Sha256Hash;
-import org.pivxj.crypto.ChildNumber;
-import org.pivxj.crypto.DeterministicKey;
-import org.pivxj.signers.CustomTransactionSigner;
-import org.pivxj.wallet.DeterministicKeyChain;
+import org.nefj.core.Sha256Hash;
+import org.nefj.crypto.ChildNumber;
+import org.nefj.crypto.DeterministicKey;
+import org.nefj.signers.CustomTransactionSigner;
+import org.nefj.wallet.DeterministicKeyChain;
 import com.google.common.collect.ImmutableList;
 
 import java.util.List;

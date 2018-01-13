@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
 /**
  * Used when a given value is either too large too afford or too small for the network to accept.

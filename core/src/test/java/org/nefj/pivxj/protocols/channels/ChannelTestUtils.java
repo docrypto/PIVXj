@@ -12,12 +12,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.core.Coin;
-import org.pivxj.core.Sha256Hash;
-import org.pivxj.core.TransactionBroadcaster;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.Coin;
+import org.nefj.core.Sha256Hash;
+import org.nefj.core.TransactionBroadcaster;
+import org.nefj.wallet.Wallet;
 
 import com.google.common.base.Objects;
 import com.google.common.util.concurrent.Futures;

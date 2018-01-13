@@ -1,12 +1,12 @@
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet2Params;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.Wallet;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet2Params;
+import org.nefj.store.BlockStore;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.Wallet;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 

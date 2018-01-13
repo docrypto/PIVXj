@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.ECKey;
-import org.pivxj.script.Script;
+import org.nefj.core.ECKey;
+import org.nefj.script.Script;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
 /**
  * <p>Exception to provide the following:</p>

@@ -1,7 +1,7 @@
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.utils.ListenerRegistration;
-import org.pivxj.utils.Threading;
+import org.nefj.utils.ListenerRegistration;
+import org.nefj.utils.Threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

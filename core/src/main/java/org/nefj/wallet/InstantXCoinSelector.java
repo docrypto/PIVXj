@@ -1,8 +1,8 @@
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.Transaction;
-import org.pivxj.core.TransactionConfidence;
-import org.pivxj.params.RegTestParams;
+import org.nefj.core.Transaction;
+import org.nefj.core.TransactionConfidence;
+import org.nefj.params.RegTestParams;
 
 /**
  * Created by Eric on 1/15/2016.

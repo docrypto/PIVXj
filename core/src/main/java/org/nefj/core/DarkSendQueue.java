@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pivxj.core;
+package org.nefj.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,8 +22,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Serializable;
 
-import static org.pivxj.core.Utils.int64ToByteStreamLE;
-import static org.pivxj.core.Utils.uint32ToByteStreamLE;
+import static org.nefj.core.Utils.int64ToByteStreamLE;
+import static org.nefj.core.Utils.uint32ToByteStreamLE;
 
 public class DarkSendQueue extends Message implements Serializable {
 

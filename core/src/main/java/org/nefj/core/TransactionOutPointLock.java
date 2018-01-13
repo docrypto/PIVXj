@@ -1,4 +1,4 @@
-package org.pivxj.core;
+package org.nefj.core;
 
 import java.util.Collection;
 import java.util.HashMap;

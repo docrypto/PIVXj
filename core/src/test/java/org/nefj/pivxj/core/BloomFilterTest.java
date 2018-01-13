@@ -15,16 +15,16 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.params.MainNetParams;
-import org.pivxj.wallet.KeyChainGroup;
-import org.pivxj.wallet.Wallet;
+import org.nefj.params.MainNetParams;
+import org.nefj.wallet.KeyChainGroup;
+import org.nefj.wallet.Wallet;
 import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.pivxj.core.Utils.HEX;
+import static org.nefj.core.Utils.HEX;
 import static org.junit.Assert.*;
 
 public class BloomFilterTest {

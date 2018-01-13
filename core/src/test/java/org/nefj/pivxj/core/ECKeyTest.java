@@ -15,25 +15,25 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.core.ECKey.ECDSASignature;
-import org.pivxj.crypto.EncryptedData;
-import org.pivxj.crypto.KeyCrypter;
-import org.pivxj.crypto.KeyCrypterScrypt;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.TestNet3Params;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.utils.BriefLogFormatter;
+import org.nefj.core.ECKey.ECDSASignature;
+import org.nefj.crypto.EncryptedData;
+import org.nefj.crypto.KeyCrypter;
+import org.nefj.crypto.KeyCrypterScrypt;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.TestNet3Params;
+import org.nefj.params.UnitTestParams;
+import org.nefj.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListeningExecutorService;
 import com.google.common.util.concurrent.MoreExecutors;
 import com.google.protobuf.ByteString;
-import org.pivxj.wallet.Protos;
-import org.pivxj.wallet.Protos.ScryptParameters;
+import org.nefj.wallet.Protos;
+import org.nefj.wallet.Protos.ScryptParameters;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -50,8 +50,8 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 
-import static org.pivxj.core.Utils.HEX;
-import static org.pivxj.core.Utils.reverseBytes;
+import static org.nefj.core.Utils.HEX;
+import static org.nefj.core.Utils.reverseBytes;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.junit.Assert.*;
 

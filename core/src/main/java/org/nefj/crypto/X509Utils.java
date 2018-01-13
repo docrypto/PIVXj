@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
 import com.google.common.base.Joiner;
 import org.spongycastle.asn1.ASN1ObjectIdentifier;
@@ -38,8 +38,8 @@ import java.util.List;
 
 /**
  * X509Utils provides tools for working with X.509 certificates and keystores, as used in the BIP 70 payment protocol.
- * For more details on this, see {@link org.pivxj.protocols.payments.PaymentSession}, the article "Working with
- * the payment protocol" on the pivxj website, or the Bitcoin developer guide.
+ * For more details on this, see {@link org.nefj.protocols.payments.PaymentSession}, the article "Working with
+ * the payment protocol" on the nefj website, or the Bitcoin developer guide.
  */
 public class X509Utils {
     /**

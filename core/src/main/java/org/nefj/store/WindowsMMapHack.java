@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.store;
+package org.nefj.store;
 
 import sun.misc.*;
 import sun.nio.ch.*;

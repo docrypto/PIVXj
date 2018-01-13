@@ -1,8 +1,8 @@
-package org.pivxj.crypto;
+package org.nefj.crypto;
 
-import org.pivxj.core.Address;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.wallet.DeterministicKeyChain;
+import org.nefj.core.Address;
+import org.nefj.params.MainNetParams;
+import org.nefj.wallet.DeterministicKeyChain;
 import org.junit.Test;
 
 import java.security.SecureRandom;

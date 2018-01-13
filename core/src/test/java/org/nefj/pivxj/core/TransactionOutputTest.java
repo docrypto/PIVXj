@@ -12,14 +12,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.collect.ImmutableList;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.testing.TestWithWallet;
-import org.pivxj.wallet.SendRequest;
+import org.nefj.params.MainNetParams;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.testing.TestWithWallet;
+import org.nefj.wallet.SendRequest;
 import org.hamcrest.CoreMatchers;
 import org.junit.After;
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package org.pivxj.core;
+package org.nefj.core;
 
 import java.math.BigInteger;
 import java.util.Map;
@@ -12,11 +12,11 @@ import java.util.Map;
 public class CoinDefinition {
 
 
-    public static final String coinName = "Pivx";
-    public static final String coinTicker = "PIVX";
-    public static final String coinURIScheme = "pivx";
+    public static final String coinName = "Nef";
+    public static final String coinTicker = "NEF";
+    public static final String coinURIScheme = "nef";
     public static final String cryptsyMarketId = "155";
-    public static final String cryptsyMarketCurrency = "PIV";
+    public static final String cryptsyMarketCurrency = "NEF";
     public static final String PATTERN_PRIVATE_KEY_START_UNCOMPRESSED = "[7]";
     public static final String PATTERN_PRIVATE_KEY_START_COMPRESSED = "[X]";
 
@@ -77,7 +77,7 @@ public class CoinDefinition {
     public static final boolean feeCanBeRaised = false;
 
     //
-    // PIVX 0.12
+    // NEF 0.12
     //
     public static final int PROTOCOL_VERSION = 70912;          //version.h PROTOCOL_VERSION
     public static final int MIN_PROTOCOL_VERSION = 70912;        //version.h MIN_PROTO_VERSION
@@ -117,8 +117,8 @@ public class CoinDefinition {
 
     //net.cpp strDNSSeed
     static public String[] dnsSeeds = new String[] {
-            "pivx.seed.fuzzbawls.pw",
-            "pivx.seed2.fuzzbawls.pw",
+            "nef.seed.fuzzbawls.pw",
+            "nef.seed2.fuzzbawls.pw",
             "coin-server.com",
             "s3v3nh4cks.ddns.net"
     };
@@ -156,8 +156,8 @@ public class CoinDefinition {
     public static BigInteger proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL);  //main.cpp bnProofOfWorkLimit (~uint256(0) >> 20); // digitalcoin: starting difficulty is 1 / 2^12
 
     static public String[] testnetDnsSeeds = new String[] {
-            "pivx-testnet.seed.fuzzbawls.pw",
-            "pivx-testnet.seed2.fuzzbawls.pw",
+            "nef-testnet.seed.fuzzbawls.pw",
+            "nef-testnet.seed2.fuzzbawls.pw",
             "s3v3nh4cks.ddns.net"
     };
     //from main.h: CAlert::CheckSignature
@@ -165,11 +165,11 @@ public class CoinDefinition {
     public static final String TESTNET_SATOSHI_KEY = "000010e83b2703ccf322f7dbd62dd5855ac7c10bd055814ce121ba32607d573b8810c02c0582aed05b4deb9c4b77b26d92428c61256cd42774babea0a073b2ed0c9";
 
     /** The string returned by getId() for the main, production network where people trade things. */
-    public static final String ID_MAINNET = "org.pivx.production";
+    public static final String ID_MAINNET = "org.nef.production";
     /** The string returned by getId() for the testnet. */
-    public static final String ID_TESTNET = "org.pivx.test";
+    public static final String ID_TESTNET = "org.nef.test";
     /** Unit test network. */
-    public static final String ID_UNITTESTNET = "com.google.pivx.unittest";
+    public static final String ID_UNITTESTNET = "com.google.nef.unittest";
 
     //checkpoints.cpp Checkpoints::mapCheckpoints
     public static void initCheckpoints(Map<Integer, Sha256Hash> checkpoints)

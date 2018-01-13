@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
 import java.io.Serializable;
 import java.math.BigInteger;
 
-import org.pivxj.core.Coin;
+import org.nefj.core.Coin;
 
 import com.google.common.base.Objects;
 

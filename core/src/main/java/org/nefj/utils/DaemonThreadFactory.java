@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

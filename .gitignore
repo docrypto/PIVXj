@@ -15,3 +15,6 @@ libs/
 checkpoints
 checkpoints-testnet.txt
 checkpoints.txt
+core/MyLogFile.log.lck
+*.db
+test-leveldb/

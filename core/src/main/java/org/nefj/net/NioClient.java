@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.net;
+package org.nefj.net;
 
 import com.google.common.base.*;
 import com.google.common.util.concurrent.*;

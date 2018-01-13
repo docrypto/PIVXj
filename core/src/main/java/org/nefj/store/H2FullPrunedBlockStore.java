@@ -15,9 +15,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.store;
+package org.nefj.store;
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.base.Function;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Throwables;
-import org.pivxj.core.listeners.*;
-import org.pivxj.net.StreamConnection;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.utils.ListenerRegistration;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.listeners.*;
+import org.nefj.net.StreamConnection;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
+import org.nefj.utils.ListenerRegistration;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
 
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.FutureCallback;
@@ -53,8 +53,8 @@ import static com.google.common.base.Preconditions.checkState;
  * handles low-level message (de)serialization.</p>
  *
  * <p>Note that timeouts are handled by the extended
- * {@link org.pivxj.net.AbstractTimeoutHandler} and timeout is automatically disabled (using
- * {@link org.pivxj.net.AbstractTimeoutHandler#setTimeoutEnabled(boolean)}) once the version
+ * {@link org.nefj.net.AbstractTimeoutHandler} and timeout is automatically disabled (using
+ * {@link org.nefj.net.AbstractTimeoutHandler#setTimeoutEnabled(boolean)}) once the version
  * handshake completes.</p>
  */
 public class Peer extends PeerSocketHandler {
@@ -181,9 +181,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link org.pivxj.net.NioClientManager#openConnection(java.net.SocketAddress, StreamConnection)}
+     * {@link org.nefj.net.NioClientManager#openConnection(java.net.SocketAddress, StreamConnection)}
      * or
-     * {@link org.pivxj.net.NioClient#NioClient(java.net.SocketAddress, StreamConnection, int)}.</p>
+     * {@link org.nefj.net.NioClient#NioClient(java.net.SocketAddress, StreamConnection, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -193,15 +193,15 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * <p>Construct a peer that reads/writes from the given block chain. Transactions stored in a {@link org.pivxj.core.TxConfidenceTable}
+     * <p>Construct a peer that reads/writes from the given block chain. Transactions stored in a {@link org.nefj.core.TxConfidenceTable}
      * will have their confidence levels updated when a peer announces it, to reflect the greater likelyhood that
      * the transaction is valid.</p>
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link org.pivxj.net.NioClientManager#openConnection(java.net.SocketAddress, StreamConnection)}
+     * {@link org.nefj.net.NioClientManager#openConnection(java.net.SocketAddress, StreamConnection)}
      * or
-     * {@link org.pivxj.net.NioClient#NioClient(java.net.SocketAddress, StreamConnection, int)}.</p>
+     * {@link org.nefj.net.NioClient#NioClient(java.net.SocketAddress, StreamConnection, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -212,15 +212,15 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * <p>Construct a peer that reads/writes from the given block chain. Transactions stored in a {@link org.pivxj.core.TxConfidenceTable}
+     * <p>Construct a peer that reads/writes from the given block chain. Transactions stored in a {@link org.nefj.core.TxConfidenceTable}
      * will have their confidence levels updated when a peer announces it, to reflect the greater likelyhood that
      * the transaction is valid.</p>
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link org.pivxj.net.NioClientManager#openConnection(java.net.SocketAddress, StreamConnection)}
+     * {@link org.nefj.net.NioClientManager#openConnection(java.net.SocketAddress, StreamConnection)}
      * or
-     * {@link org.pivxj.net.NioClient#NioClient(java.net.SocketAddress, StreamConnection, int)}.</p>
+     * {@link org.nefj.net.NioClient#NioClient(java.net.SocketAddress, StreamConnection, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -256,9 +256,9 @@ public class Peer extends PeerSocketHandler {
      *
      * <p>Note that this does <b>NOT</b> make a connection to the given remoteAddress, it only creates a handler for a
      * connection. If you want to create a one-off connection, create a Peer and pass it to
-     * {@link org.pivxj.net.NioClientManager#openConnection(java.net.SocketAddress, StreamConnection)}
+     * {@link org.nefj.net.NioClientManager#openConnection(java.net.SocketAddress, StreamConnection)}
      * or
-     * {@link org.pivxj.net.NioClient#NioClient(java.net.SocketAddress, StreamConnection, int)}.</p>
+     * {@link org.nefj.net.NioClient#NioClient(java.net.SocketAddress, StreamConnection, int)}.</p>
      *
      * <p>The remoteAddress provided should match the remote address of the peer which is being connected to, and is
      * used to keep track of which peers relayed transactions and offer more descriptive logging.</p>
@@ -574,7 +574,7 @@ public class Peer extends PeerSocketHandler {
                 context.instantSend.processTransactionLockVoteMessage(this, (TransactionLockVote)m);
         }
         else if(m instanceof SyncStatusCount) {
-            // todo furszy: check pivx masternodes
+            // todo furszy: check nef masternodes
             if (context.masternodeSync!=null) {
                 //todo: process master nodes messages
                 //context.masternodeSync.processSyncStatusCount(this, (SyncStatusCount) m);
@@ -622,7 +622,7 @@ public class Peer extends PeerSocketHandler {
                 vPeerVersionMessage.localServices,
                 String.format(Locale.US, "%tF %tT", peerTime, peerTime),
                 vPeerVersionMessage.bestHeight);
-        // pivxj is a client mode implementation. That means there's not much point in us talking to other client
+        // nefj is a client mode implementation. That means there's not much point in us talking to other client
         // mode nodes because we can't download the data from them we need to find/verify transactions. Some bogus
         // implementations claim to have a block chain in their services field but then report a height of zero, filter
         // them out here.
@@ -843,7 +843,7 @@ public class Peer extends PeerSocketHandler {
             TransactionConfidence confidence = tx.getConfidence();
             confidence.setSource(TransactionConfidence.Source.NETWORK);
 
-            //PIVX Specific
+            //NEF Specific
             // todo furszy: commented dash instantSend for now.
             if (context.instantSend!=null)
                 context.instantSend.syncTransaction(tx, null);
@@ -1830,7 +1830,7 @@ public class Peer extends PeerSocketHandler {
     /**
      * Sends the peer a ping message and returns a future that will be invoked when the pong is received back.
      * The future provides a number which is the number of milliseconds elapsed between the ping and the pong.
-     * Once the pong is received the value returned by {@link org.pivxj.core.Peer#getLastPingTime()} is
+     * Once the pong is received the value returned by {@link org.nefj.core.Peer#getLastPingTime()} is
      * updated.
      * @throws ProtocolException if the peer version is too low to support measurable pings.
      */
@@ -1849,7 +1849,7 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * Returns the elapsed time of the last ping/pong cycle. If {@link org.pivxj.core.Peer#ping()} has never
+     * Returns the elapsed time of the last ping/pong cycle. If {@link org.nefj.core.Peer#ping()} has never
      * been called or we did not hear back the "pong" message yet, returns {@link Long#MAX_VALUE}.
      */
     public long getLastPingTime() {
@@ -1864,7 +1864,7 @@ public class Peer extends PeerSocketHandler {
     }
 
     /**
-     * Returns a moving average of the last N ping/pong cycles. If {@link org.pivxj.core.Peer#ping()} has never
+     * Returns a moving average of the last N ping/pong cycles. If {@link org.nefj.core.Peer#ping()} has never
      * been called or we did not hear back the "pong" message yet, returns {@link Long#MAX_VALUE}. The moving average
      * window is 5 buckets.
      */

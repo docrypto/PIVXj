@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.net;
+package org.nefj.net;
 
-import org.pivxj.core.Message;
-import org.pivxj.utils.Threading;
+import org.nefj.core.Message;
+import org.nefj.utils.Threading;
 import com.google.common.base.Throwables;
 import org.slf4j.LoggerFactory;
 

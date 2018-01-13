@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Joiner;

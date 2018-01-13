@@ -12,19 +12,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
-import org.pivxj.core.listeners.PreMessageReceivedEventListener;
-import org.pivxj.core.*;
-import org.pivxj.kits.WalletAppKit;
-import org.pivxj.params.RegTestParams;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.utils.Threading;
-import org.pivxj.wallet.Wallet;
+import org.nefj.core.listeners.PreMessageReceivedEventListener;
+import org.nefj.core.*;
+import org.nefj.kits.WalletAppKit;
+import org.nefj.params.RegTestParams;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.utils.Threading;
+import org.nefj.wallet.Wallet;
 
 import java.io.File;
 
-import static org.pivxj.core.Coin.*;
+import static org.nefj.core.Coin.*;
 
 /**
  * This is a little test app that waits for a coin on a local regtest node, then  generates two transactions that double

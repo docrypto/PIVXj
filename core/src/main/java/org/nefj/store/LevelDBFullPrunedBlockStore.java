@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.store;
+package org.nefj.store;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -28,19 +28,19 @@ import java.util.concurrent.TimeUnit;
 import java.io.*;
 import java.nio.ByteBuffer;
 
-import org.pivxj.core.Address;
-import org.pivxj.core.AddressFormatException;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.ScriptException;
-import org.pivxj.core.Sha256Hash;
-import org.pivxj.core.StoredBlock;
-import org.pivxj.core.StoredUndoableBlock;
-import org.pivxj.core.Transaction;
-import org.pivxj.core.TransactionOutputChanges;
-import org.pivxj.core.UTXO;
-import org.pivxj.core.UTXOProviderException;
-import org.pivxj.core.VerificationException;
-import org.pivxj.script.Script;
+import org.nefj.core.Address;
+import org.nefj.core.AddressFormatException;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.ScriptException;
+import org.nefj.core.Sha256Hash;
+import org.nefj.core.StoredBlock;
+import org.nefj.core.StoredUndoableBlock;
+import org.nefj.core.Transaction;
+import org.nefj.core.TransactionOutputChanges;
+import org.nefj.core.UTXO;
+import org.nefj.core.UTXOProviderException;
+import org.nefj.core.VerificationException;
+import org.nefj.script.Script;
 import org.iq80.leveldb.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

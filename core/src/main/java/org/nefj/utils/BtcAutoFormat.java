@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import static org.pivxj.core.Coin.SMALLEST_UNIT_EXPONENT;
+import static org.nefj.core.Coin.SMALLEST_UNIT_EXPONENT;
 import com.google.common.collect.ImmutableList;
 
 import java.math.BigInteger;
@@ -54,7 +54,7 @@ import java.util.Locale;
  * @see          java.text.NumberFormat
  * @see          java.text.DecimalFormat
  * @see          DecimalFormatSymbols
- * @see          org.pivxj.core.Coin
+ * @see          org.nefj.core.Coin
  */
 
 public final class BtcAutoFormat extends BtcFormat {

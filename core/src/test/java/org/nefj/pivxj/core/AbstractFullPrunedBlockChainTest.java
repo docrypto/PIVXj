@@ -15,19 +15,19 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import com.google.common.collect.Lists;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.script.Script;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.store.FullPrunedBlockStore;
-import org.pivxj.utils.BlockFileLoader;
-import org.pivxj.utils.BriefLogFormatter;
-import org.pivxj.wallet.SendRequest;
-import org.pivxj.wallet.Wallet;
-import org.pivxj.wallet.WalletTransaction;
+import org.nefj.params.MainNetParams;
+import org.nefj.params.UnitTestParams;
+import org.nefj.script.Script;
+import org.nefj.store.BlockStoreException;
+import org.nefj.store.FullPrunedBlockStore;
+import org.nefj.utils.BlockFileLoader;
+import org.nefj.utils.BriefLogFormatter;
+import org.nefj.wallet.SendRequest;
+import org.nefj.wallet.Wallet;
+import org.nefj.wallet.WalletTransaction;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ import java.lang.ref.WeakReference;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.pivxj.core.Coin.FIFTY_COINS;
+import static org.nefj.core.Coin.FIFTY_COINS;
 import static org.junit.Assert.*;
 import org.junit.rules.ExpectedException;
 

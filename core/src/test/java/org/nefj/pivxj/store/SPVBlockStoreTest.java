@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.store;
+package org.nefj.store;
 
-import org.pivxj.core.Address;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.StoredBlock;
-import org.pivxj.params.UnitTestParams;
+import org.nefj.core.Address;
+import org.nefj.core.ECKey;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.StoredBlock;
+import org.nefj.params.UnitTestParams;
 import org.junit.Test;
 
 import java.io.File;

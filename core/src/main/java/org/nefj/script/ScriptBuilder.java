@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.pivxj.script;
+package org.nefj.script;
 
 import com.google.common.collect.Lists;
-import org.pivxj.core.Address;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.Utils;
-import org.pivxj.crypto.TransactionSignature;
+import org.nefj.core.Address;
+import org.nefj.core.ECKey;
+import org.nefj.core.Utils;
+import org.nefj.crypto.TransactionSignature;
 
 import javax.annotation.Nullable;
 import java.math.BigInteger;
@@ -32,11 +32,11 @@ import java.util.Stack;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkState;
-import static org.pivxj.script.ScriptOpCodes.*;
+import static org.nefj.script.ScriptOpCodes.*;
 
 /**
  * <p>Tools for the construction of commonly used script types. You don't normally need this as it's hidden behind
- * convenience methods on {@link org.pivxj.core.Transaction}, but they are useful when working with the
+ * convenience methods on {@link org.nefj.core.Transaction}, but they are useful when working with the
  * protocol at a lower level.</p>
  */
 public class ScriptBuilder {

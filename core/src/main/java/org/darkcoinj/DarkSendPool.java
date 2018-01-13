@@ -1,9 +1,9 @@
 package org.darkcoinj;
 
-import org.pivxj.core.*;
-import org.pivxj.script.Script;
-import org.pivxj.utils.ContextPropagatingThreadFactory;
-import org.pivxj.utils.Threading;
+import org.nefj.core.*;
+import org.nefj.script.Script;
+import org.nefj.utils.ContextPropagatingThreadFactory;
+import org.nefj.utils.Threading;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.params;
+package org.nefj.params;
 
-import org.pivxj.core.*;
+import org.nefj.core.*;
 
 import java.math.BigInteger;
 
 /**
- * Network parameters used by the pivxj unit tests (and potentially your own). This lets you solve a block using
- * {@link org.pivxj.core.Block#solve()} by setting difficulty to the easiest possible.
+ * Network parameters used by the nefj unit tests (and potentially your own). This lets you solve a block using
+ * {@link org.nefj.core.Block#solve()} by setting difficulty to the easiest possible.
  */
 public class UnitTestParams extends AbstractBitcoinNetParams {
     public static final int UNITNET_MAJORITY_WINDOW = 8;

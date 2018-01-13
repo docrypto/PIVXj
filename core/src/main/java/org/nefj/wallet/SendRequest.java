@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
@@ -24,18 +24,18 @@ import java.math.BigInteger;
 import java.util.Date;
 
 import org.bitcoin.protocols.payments.Protos.PaymentDetails;
-import org.pivxj.core.Address;
-import org.pivxj.core.Coin;
-import org.pivxj.core.Context;
-import org.pivxj.core.ECKey;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.Transaction;
-import org.pivxj.core.TransactionOutput;
-import org.pivxj.script.Script;
-import org.pivxj.script.ScriptBuilder;
-import org.pivxj.utils.ExchangeRate;
-import org.pivxj.wallet.KeyChain.KeyPurpose;
-import org.pivxj.wallet.Wallet.MissingSigsMode;
+import org.nefj.core.Address;
+import org.nefj.core.Coin;
+import org.nefj.core.Context;
+import org.nefj.core.ECKey;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.Transaction;
+import org.nefj.core.TransactionOutput;
+import org.nefj.script.Script;
+import org.nefj.script.ScriptBuilder;
+import org.nefj.utils.ExchangeRate;
+import org.nefj.wallet.KeyChain.KeyPurpose;
+import org.nefj.wallet.Wallet.MissingSigsMode;
 import org.spongycastle.crypto.params.KeyParameter;
 
 import com.google.common.base.MoreObjects;
@@ -65,7 +65,7 @@ public class SendRequest {
 
     /**
      * When emptyWallet is set, all coins selected by the coin selector are sent to the first output in tx
-     * (its value is ignored and set to {@link org.pivxj.wallet.Wallet#getBalance()} - the fees required
+     * (its value is ignored and set to {@link org.nefj.wallet.Wallet#getBalance()} - the fees required
      * for the transaction). Any additional outputs are removed.
      */
     public boolean emptyWallet = false;
@@ -115,7 +115,7 @@ public class SendRequest {
     public KeyParameter aesKey = null;
 
     /**
-     * If not null, the {@link org.pivxj.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
+     * If not null, the {@link org.nefj.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
      * responsible for choosing which transaction outputs (coins) in a wallet to use given the desired send value
      * amount.
      */
@@ -265,6 +265,6 @@ public class SendRequest {
         return helper.toString();
     }
 
-    //PIVX Specific
+    //NEF Specific
     public boolean useInstantSend;
 }

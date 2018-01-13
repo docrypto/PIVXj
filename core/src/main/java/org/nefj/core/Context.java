@@ -12,12 +12,12 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.core.listeners.BlockChainListener;
-import org.pivxj.store.FlatDB;
-import org.pivxj.store.HashStore;
-import org.pivxj.store.MasternodeDB;
+import org.nefj.core.listeners.BlockChainListener;
+import org.nefj.store.FlatDB;
+import org.nefj.store.HashStore;
+import org.nefj.store.MasternodeDB;
 import org.darkcoinj.DarkSendPool;
 import org.darkcoinj.InstantSend;
 import org.slf4j.*;
@@ -38,7 +38,7 @@ import static com.google.common.base.Preconditions.*;
 
 /**
  * <p>The Context object holds various objects and pieces of configuration that are scoped to a specific instantiation of
- * pivxj for a specific network. You can get an instance of this class through calling {@link #get()}.</p>
+ * nefj for a specific network. You can get an instance of this class through calling {@link #get()}.</p>
  *
  * <p>Context is new in 0.13 and the library is currently in a transitional period: you should create a Context that
  * wraps your chosen network parameters before using the rest of the library. However if you don't, things will still
@@ -78,7 +78,7 @@ public class Context {
      * @param params The network parameters that will be associated with this context.
      */
     public Context(NetworkParameters params) {
-        log.info("Creating pivxj {} context.", VersionMessage.BITCOINJ_VERSION);
+        log.info("Creating nefj {} context.", VersionMessage.BITCOINJ_VERSION);
         this.confidenceTable = new TxConfidenceTable();
         this.params = params;
         lastConstructed = this;
@@ -111,7 +111,7 @@ public class Context {
      * object. This method returns that. Note that to help you develop, this method will <i>also</i> propagate whichever
      * context was created last onto the current thread, if it's missing. However it will print an error when doing so
      * because propagation of contexts is meant to be done manually: this is so two libraries or subsystems that
-     * independently use pivxj (or possibly alt coin forks of it) can operate correctly.
+     * independently use nefj (or possibly alt coin forks of it) can operate correctly.
      *
      * @throws java.lang.IllegalStateException if no context exists at all or if we are in strict mode and there is no context.
      */
@@ -119,14 +119,14 @@ public class Context {
         Context tls = slot.get();
         if (tls == null) {
             if (isStrictMode) {
-                log.error("Thread is missing a pivxj context.");
+                log.error("Thread is missing a nefj context.");
                 log.error("You should use Context.propagate() or a ContextPropagatingThreadFactory.");
                 throw new IllegalStateException("missing context");
             }
             if (lastConstructed == null)
-                throw new IllegalStateException("You must construct a Context object before using pivxj!");
+                throw new IllegalStateException("You must construct a Context object before using nefj!");
             slot.set(lastConstructed);
-            log.error("Performing thread fixup: you are accessing pivxj via a thread that has not had any context set on it.");
+            log.error("Performing thread fixup: you are accessing nefj via a thread that has not had any context set on it.");
             log.error("This error has been corrected for, but doing this makes your app less robust.");
             log.error("You should use Context.propagate() or a ContextPropagatingThreadFactory.");
             log.error("Please refer to the user guide for more information about this.");
@@ -140,7 +140,7 @@ public class Context {
     }
 
     /**
-     * Require that new threads use {@link #propagate(Context)} or {@link org.pivxj.utils.ContextPropagatingThreadFactory},
+     * Require that new threads use {@link #propagate(Context)} or {@link org.nefj.utils.ContextPropagatingThreadFactory},
      * rather than using a heuristic for the desired context.
      */
     public static void enableStrictMode() {
@@ -166,7 +166,7 @@ public class Context {
      * Sets the given context as the current thread context. You should use this if you create your own threads that
      * want to create core BitcoinJ objects. Generally, if a class can accept a Context in its constructor and might
      * be used (even indirectly) by a thread, you will want to call this first. Your task may be simplified by using
-     * a {@link org.pivxj.utils.ContextPropagatingThreadFactory}.
+     * a {@link org.nefj.utils.ContextPropagatingThreadFactory}.
      */
     public static void propagate(Context context) {
         slot.set(checkNotNull(context));
@@ -183,7 +183,7 @@ public class Context {
     }
 
     /**
-     * Returns the {@link org.pivxj.core.NetworkParameters} specified when this context was (auto) created. The
+     * Returns the {@link org.nefj.core.NetworkParameters} specified when this context was (auto) created. The
      * network parameters defines various hard coded constants for a specific instance of a Bitcoin network, such as
      * main net, testnet, etc.
      */
@@ -201,14 +201,14 @@ public class Context {
     }
 
     //
-    // Pivx Specific
+    // Nef Specific
     //
 
-    public void initPivx(boolean liteMode, boolean allowInstantX) {
+    public void initNef(boolean liteMode, boolean allowInstantX) {
         this.liteMode = liteMode;
         this.allowInstantX = allowInstantX;
 
-        //Pivx Specific
+        //Nef Specific
         sporkManager = new SporkManager(this);
 
         masternodePayments = new MasternodePayments(this);
@@ -250,13 +250,13 @@ public class Context {
             //hashStore = new HashStore(chain.getBlockStore());
             chain.addListener(updateHeadListener);
         }
-        //todo: furszy pivx init
+        //todo: furszy nef init
         if (sporkManager!=null) {
             sporkManager.setBlockChain(chain);
             masternodeManager.setBlockChain(chain);
             masternodeSync.setBlockChain(chain);
         }else {
-            log.error("##### Pivx init not called!, this is going to be an issue in the future");
+            log.error("##### Nef init not called!, this is going to be an issue in the future");
         }
         if (instantSend!=null) {
             instantSend.setBlockChain(chain);
@@ -285,7 +285,7 @@ public class Context {
     BlockChainListener updateHeadListener = new BlockChainListener () {
         public void notifyNewBestBlock(StoredBlock block) throws VerificationException
         {
-            //todo furszy: commented pivx MN stuff
+            //todo furszy: commented nef MN stuff
             if (masternodeSync!=null)
                 masternodeSync.updateBlockTip(block);
         }

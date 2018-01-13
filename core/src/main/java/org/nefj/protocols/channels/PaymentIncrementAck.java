@@ -12,9 +12,9 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.core.Coin;
+import org.nefj.core.Coin;
 import com.google.protobuf.ByteString;
 
 import javax.annotation.Nullable;

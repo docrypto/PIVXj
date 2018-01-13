@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 public class UTXOProviderException extends Exception {
     public UTXOProviderException() {

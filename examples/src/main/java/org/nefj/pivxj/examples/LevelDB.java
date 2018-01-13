@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.examples;
+package org.nefj.examples;
 
 import java.net.InetAddress;
-import org.pivxj.core.FullPrunedBlockChain;
-import org.pivxj.core.PeerGroup;
-import org.pivxj.params.MainNetParams;
-import org.pivxj.store.FullPrunedBlockStore;
-import org.pivxj.store.LevelDBFullPrunedBlockStore;
+import org.nefj.core.FullPrunedBlockChain;
+import org.nefj.core.PeerGroup;
+import org.nefj.params.MainNetParams;
+import org.nefj.store.FullPrunedBlockStore;
+import org.nefj.store.LevelDBFullPrunedBlockStore;
 
 public class LevelDB {
     public static void main(String[] args) throws Exception {

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.pivxj.utils;
+package org.nefj.utils;
 
-import org.pivxj.core.BlockChain;
-import org.pivxj.core.Context;
-import org.pivxj.core.NetworkParameters;
-import org.pivxj.core.StoredBlock;
-import org.pivxj.params.UnitTestParams;
-import org.pivxj.store.BlockStore;
-import org.pivxj.store.BlockStoreException;
-import org.pivxj.store.MemoryBlockStore;
-import org.pivxj.testing.FakeTxBuilder;
+import org.nefj.core.BlockChain;
+import org.nefj.core.Context;
+import org.nefj.core.NetworkParameters;
+import org.nefj.core.StoredBlock;
+import org.nefj.params.UnitTestParams;
+import org.nefj.store.BlockStore;
+import org.nefj.store.BlockStoreException;
+import org.nefj.store.MemoryBlockStore;
+import org.nefj.testing.FakeTxBuilder;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;

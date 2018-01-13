@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.pivxj.protocols.channels;
+package org.nefj.protocols.channels;
 
-import org.pivxj.wallet.SendRequest;
-import org.pivxj.wallet.Wallet;
+import org.nefj.wallet.SendRequest;
+import org.nefj.wallet.Wallet;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
@@ -25,9 +25,9 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
-import org.pivxj.core.*;
-import org.pivxj.crypto.TransactionSignature;
-import org.pivxj.script.Script;
+import org.nefj.core.*;
+import org.nefj.crypto.TransactionSignature;
+import org.nefj.script.Script;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,11 +1,11 @@
-package org.pivxj.core;
+package org.nefj.core;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Serializable;
 
-import static org.pivxj.core.Utils.int64ToByteStreamLE;
-import static org.pivxj.core.Utils.uint32ToByteStreamLE;
+import static org.nefj.core.Utils.int64ToByteStreamLE;
+import static org.nefj.core.Utils.uint32ToByteStreamLE;
 
 /**
  * Created by Eric on 2/8/2015.

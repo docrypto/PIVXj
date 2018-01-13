@@ -16,14 +16,14 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import org.pivxj.params.Networks;
-import org.pivxj.script.Script;
+import org.nefj.params.Networks;
+import org.nefj.script.Script;
 
 import javax.annotation.Nullable;
 

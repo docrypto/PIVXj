@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.pivxj.core;
+package org.nefj.core;
 
-import org.pivxj.script.Script;
-import org.pivxj.wallet.WalletTransaction;
+import org.nefj.script.Script;
+import org.nefj.wallet.WalletTransaction;
 
 import java.util.Map;
 
 /**
- * This interface is used to abstract the {@link org.pivxj.wallet.Wallet} and the {@link org.pivxj.core.Transaction}
+ * This interface is used to abstract the {@link org.nefj.wallet.Wallet} and the {@link org.nefj.core.Transaction}
  */
 public interface TransactionBag {
     /** Returns true if this wallet contains a public key which hashes to the given hash. */

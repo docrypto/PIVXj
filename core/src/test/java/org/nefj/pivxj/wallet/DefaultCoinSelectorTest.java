@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package org.pivxj.wallet;
+package org.nefj.wallet;
 
-import org.pivxj.core.*;
-import org.pivxj.params.*;
-import org.pivxj.testing.*;
+import org.nefj.core.*;
+import org.nefj.params.*;
+import org.nefj.testing.*;
 import org.junit.*;
 
 import java.net.*;
 import java.util.*;
 
 import static com.google.common.base.Preconditions.*;
-import static org.pivxj.core.Coin.*;
+import static org.nefj.core.Coin.*;
 import static org.junit.Assert.*;
 
 public class DefaultCoinSelectorTest extends TestWithWallet {

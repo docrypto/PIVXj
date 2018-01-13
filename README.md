@@ -1,6 +1,6 @@
-### Welcome to pivxj
+### Welcome to nefj
 
-The pivxj library is a Java implementation of the PIVX protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of PIVX Core. It comes with full documentation and some example apps showing how to use it.
+The nefj library is a Java implementation of the NEF protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of NEF Core. It comes with full documentation and some example apps showing how to use it.
 
 ### Technologies
 
@@ -37,13 +37,13 @@ These are found in the `examples` module.
 
 #### Forwarding service
 
-This will download the block chain and eventually print a PIVX address that it has generated.
+This will download the block chain and eventually print a NEF address that it has generated.
 
 If you send coins to that address, it will forward them on to the address you specified.
 
 ```
   cd examples
-  mvn exec:java -Dexec.mainClass=org.pivxj.examples.ForwardingService -Dexec.args="<insert a pivx address here>"
+  mvn exec:java -Dexec.mainClass=org.nefj.examples.ForwardingService -Dexec.args="<insert a nef address here>"
 
 ```
 

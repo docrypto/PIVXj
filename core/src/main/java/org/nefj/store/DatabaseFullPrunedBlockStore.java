@@ -16,11 +16,11 @@
  * limitations under the License.
  */
 
-package org.pivxj.store;
+package org.nefj.store;
 
 import com.google.common.collect.Lists;
-import org.pivxj.core.*;
-import org.pivxj.script.Script;
+import org.nefj.core.*;
+import org.nefj.script.Script;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -506,7 +506,7 @@ public abstract class DatabaseFullPrunedBlockStore implements FullPrunedBlockSto
                 results.close();
             } catch (SQLException ex) {
                 throw new BlockStoreException("Database block store is not compatible with the current release.  " +
-                        "See pivxj release notes for further information: " + ex.getMessage());
+                        "See nefj release notes for further information: " + ex.getMessage());
             } finally {
                 if (ps != null && !ps.isClosed()) {
                     ps.close();
@@ -554,7 +554,7 @@ public abstract class DatabaseFullPrunedBlockStore implements FullPrunedBlockSto
     }
 
     /**
-     * Create a new store for the given {@link org.pivxj.core.NetworkParameters}.
+     * Create a new store for the given {@link org.nefj.core.NetworkParameters}.
      * @param params The network.
      * @throws BlockStoreException If the store couldn't be created.
      */
@@ -1119,10 +1119,10 @@ public abstract class DatabaseFullPrunedBlockStore implements FullPrunedBlockSto
     /**
      * Calculate the balance for a coinbase, to-address, or p2sh address.
      *
-     * <p>The balance {@link org.pivxj.store.DatabaseFullPrunedBlockStore#getBalanceSelectSQL()} returns
+     * <p>The balance {@link org.nefj.store.DatabaseFullPrunedBlockStore#getBalanceSelectSQL()} returns
      * the balance (summed) as an number, then use calculateClientSide=false</p>
      *
-     * <p>The balance {@link org.pivxj.store.DatabaseFullPrunedBlockStore#getBalanceSelectSQL()} returns
+     * <p>The balance {@link org.nefj.store.DatabaseFullPrunedBlockStore#getBalanceSelectSQL()} returns
      * the all the openoutputs as stored in the DB (binary), then use calculateClientSide=true</p>
      *
      * @param address The address to calculate the balance of
